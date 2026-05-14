@@ -120,6 +120,14 @@ a { color: inherit; }
   white-space: nowrap;
 }
 .pb-counter strong { color: var(--ink); font-weight: 600; font-size: 14px; letter-spacing: -0.01em; text-transform: none; font-family: var(--font); }
+.pb-credit {
+  max-width: var(--maxw); margin: 0 auto;
+  padding: 0 24px 12px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--muted); text-align: center;
+}
+.pb-credit a { color: var(--muted); text-decoration: none; border-bottom: 1px solid transparent; transition: color 0.15s, border-color 0.15s; }
+.pb-credit a:hover { color: var(--accent); border-bottom-color: currentColor; }
 .pb-nav-btn {
   display: inline-flex; align-items: center; gap: 10px;
   padding: 12px 22px;

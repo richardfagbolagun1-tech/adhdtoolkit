@@ -2,24 +2,33 @@
 
 > **🤖 Claude Code: read this first.**
 >
-> This folder contains an updated version of an already-deployed static website (`untangleyouradhd.com`, hosted on Netlify with GitHub continuous deploy). The user wants the changes in this folder pushed live.
+> This folder contains a finished static website. The user is launching it for the **first time** — no GitHub repo or Netlify site exists yet. The target domain is **`untangleyouradhd.com`** (the user already owns this domain).
 >
 > **What to do:**
-> 1. Ask the user for the GitHub repo URL (and clone path on their machine, if any). The repo is the source for the Netlify site — they may already have a local clone, or you can clone it fresh.
-> 2. Copy the contents of this folder into the working tree of that repo, overwriting existing files. Preserve `.git/` and any local-only files like `.env`.
-> 3. Run `git status` and show the diff summary to the user before committing.
-> 4. Commit with a descriptive message (e.g. `Content updates: photo swaps for pages 12/19/20/22/26/49/50/69/70/71/74, domain → untangleyouradhd.com, compressed all image assets`).
-> 5. `git push` to `main`.
-> 6. Tell the user to check the **Deploys** tab on Netlify — auto-deploy usually completes in 30–60 seconds.
-> 7. If `netlify` CLI is installed, you can also run `netlify open` to jump straight to the dashboard, or `netlify status` to confirm the linked site.
+> 1. Confirm you're in this folder (it should contain `index.html`, `netlify.toml`, `assets/`, and the `.jsx` files).
+> 2. **Create the GitHub repo and push:**
+>    - Check the user is authenticated: `gh auth status` — if not, run `gh auth login` and walk them through it.
+>    - `git init && git add -A && git commit -m "Initial commit: Untangle ADHD Playbook"`
+>    - `gh repo create untangle-adhd-playbook --public --source=. --push` (or `--private` if they prefer)
+>    - Tell the user the repo URL when done.
+> 3. **Deploy to Netlify** — easiest is via CLI:
+>    - Check: `netlify --version`. If missing, run `npm install -g netlify-cli` (you may need to instruct the user to do this).
+>    - `netlify login` — opens browser for the user to authenticate.
+>    - `netlify init` — choose "Create & configure a new site", pick a team, accept the auto-detected build settings (none — it's a static site), confirm publish dir is `.`. This links the repo to a new Netlify site with continuous deploy enabled.
+>    - `netlify deploy --prod` to push the first production build (or just wait — `netlify init` already triggered one).
+>    - Run `netlify open` and tell the user to look at the deployed URL (something like `untangle-adhd-playbook.netlify.app`) to confirm it works before adding the custom domain.
+> 4. **Add the custom domain** — this part needs the Netlify web UI:
+>    - Tell the user to go to **Netlify dashboard → Domain management → Add a domain → enter `untangleyouradhd.com`**.
+>    - Netlify will show DNS records the user needs to add at their domain registrar (where they bought `untangleyouradhd.com`). Either:
+>      - Point the domain's nameservers at Netlify (easiest), OR
+>      - Add an `A` record for the apex and a `CNAME` for `www` (tell them the exact values Netlify shows).
+>    - Once DNS resolves (can take a few minutes to a few hours), Netlify auto-provisions HTTPS.
+> 5. Tell the user: future updates just need `git add -A && git commit && git push` — Netlify auto-deploys.
 >
-> **Do not** change the contents of any file in this folder — they're the intended new state. The only edits should be to whatever lives in the GitHub repo that ISN'T in this folder (e.g. nothing, usually).
->
-> If the user's local clone doesn't exist, clone the repo into a fresh folder first, then proceed.
->
-> Domain to confirm in `index.html` after copying: `untangleyouradhd.com` (canonical + og:url, lines 11–12).
+> **If anything fails**, surface the error to the user and pause rather than guessing.
 
 ---
+
 
 This bundle contains a finished static website. Your job is to **deploy it to Netlify** and wire up the custom domain. No code changes are needed unless something flagged in the "Known issues" section comes up.
 

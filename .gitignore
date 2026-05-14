@@ -13,6 +13,3 @@ Thumbs.db
 
 # Netlify local
 .netlify/
-
-# Claude Code local config
-.claude/

@@ -29,7 +29,7 @@
   @page { size: A4; margin: 18mm 16mm 18mm 16mm; }
   html, body { background: #fff !important; color: #1a1814 !important; font-size: 11pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   /* Hide app chrome: drawer toggle, page nav, counter, footer, scrubbers */
-  .pb-topbar, .pb-drawer, .pb-drawer-backdrop, .pb-nav, .pb-counter, .pb-progress, .pb-pager, button.pb-menu, nav, .pager, .progress-rail, .nav-buttons { display: none !important; }
+  .pb-topbar, .pb-drawer, .pb-drawer-backdrop, .pb-nav, .pb-counter, .pb-progress, .pb-pager, .pb-credit, button.pb-menu, nav, .pager, .progress-rail, .nav-buttons { display: none !important; }
   /* Make the page container print as a clean flowing block */
   #app, .pb-stage, .pb-page, .pb-page-inner, .pb-content, main, article { display: block !important; position: static !important; transform: none !important; padding: 0 !important; margin: 0 !important; max-width: 100% !important; width: 100% !important; height: auto !important; min-height: 0 !important; overflow: visible !important; background: #fff !important; }
   /* Hero block: stack the photo under the text instead of two-column */
@@ -386,6 +386,7 @@ function App() {
             <span className="full-label">{idx === 0 ? "Start" : idx === total - 2 ? "Finish" : "Next"}</span><span>→</span>
           </button>
         </div>
+        <p className="pb-credit">Made with love by <a href="https://richexperiments.com" target="_blank" rel="noopener"><strong>Rich Experiments</strong></a></p>
       </footer>
 
       {/* Drawer */}

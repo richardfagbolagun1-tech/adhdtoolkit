@@ -1,0 +1,18 @@
+# Internal / non-deployable
+MARKETING.md
+REDDIT-GAPS.md
+alt-volume/
+uploads/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Netlify local
+.netlify/
+
+# Claude Code local config
+.claude/

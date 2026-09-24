@@ -8,48 +8,68 @@
 # ---------------------------------------------------------------------------
 # Redirects
 # ---------------------------------------------------------------------------
-# Keep old space-containing URLs working if anyone shared them before rename.
-
+# Old single-page URLs now point to the cover (index.html)
 [[redirects]]
   from = "/ADHD%20Playbook.html"
-  to = "/adhd-playbook.html"
+  to = "/"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/ADHD Playbook.html"
-  to = "/adhd-playbook.html"
+  from = "/adhd-playbook.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/untangle.html"
+  to = "/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/Untangle.html"
-  to = "/untangle.html"
+  to = "/"
   status = 301
   force = true
 
-# Pretty URLs — /playbook serves the playbook without the .html
 [[redirects]]
   from = "/playbook"
-  to = "/adhd-playbook.html"
-  status = 200
+  to = "/"
+  status = 301
 
 # ---------------------------------------------------------------------------
 # Headers
 # ---------------------------------------------------------------------------
 
-# Long cache for CSS / JSX content files — they're versioned by filename,
-# and you can bust by renaming if you ever need to.
+# CSS / JSX: browsers re-check on each page load (cheap 304s via Netlify ETags),
+# so every deploy shows up straight away.
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
 [[headers]]
   for = "/*.css"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/*.jsx"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=0, must-revalidate"
     Content-Type = "text/babel; charset=utf-8"
+
+# Fonts-free vendor + images: long cache (filenames change when content does)
+[[headers]]
+  for = "/vendor/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
 
 # Short cache on HTML so updates ship fast.
 [[headers]]

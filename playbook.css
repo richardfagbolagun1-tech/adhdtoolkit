@@ -1,5 +1,4 @@
 /* Untangle Playbook — design tokens + chrome */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap');
 
 :root {
   --bg: #F4EFE6;
@@ -50,24 +49,30 @@ a { color: inherit; }
   padding: 14px 24px;
   display: flex; align-items: center; gap: 24px;
 }
-.pb-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; cursor: pointer; background:none; border:none; padding:0; color: var(--ink); }
-.pb-brand svg { width: 26px; height: 26px; }
+.pb-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 25px; letter-spacing: -0.02em; cursor: pointer; background:none; border:none; padding:0; color: var(--ink); }
+.pb-brand svg { width: 32px; height: 32px; }
 .pb-chapter-label {
   flex: 1;
   font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--muted);
   display: flex; align-items: center; gap: 10px;
 }
-.pb-chapter-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.pb-chapter-dot { display: none; }
+.pb-readtime { opacity: 0.6; white-space: nowrap; }
 .pb-top-actions { display: flex; gap: 10px; align-items: center; }
 .pb-icon-btn {
-  width: 38px; height: 38px;
+  width: 44px; height: 44px;
   border: 1px solid var(--line); border-radius: 50%;
   background: transparent; color: var(--ink); cursor: pointer;
   display: grid; place-items: center;
   transition: background 0.15s, color 0.15s;
 }
 .pb-icon-btn:hover { background: var(--ink); color: var(--bg); }
+.pb-icon-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pb-textsize-btn { font-family: var(--font); font-weight: 700; font-size: 14px; }
+
+/* Standing rule: reading text NEVER gets an arbitrary column cap. Applies to every text-bearing tag, not just <p> — <li>, blockquote, dd, etc. all count. Check this rule before adding any max-width to body copy anywhere on the site. */
+.pb-page p, .pb-page li, .pb-page .lede, .pb-page blockquote, .pb-page dd, .cover-hero-facts li { max-width: none !important; }
 
 /* Progress bar */
 .pb-progress {
@@ -114,12 +119,12 @@ a { color: inherit; }
   gap: 20px; align-items: center;
 }
 .pb-counter {
-  font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  font-family: var(--mono); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--muted);
   text-align: center;
   white-space: nowrap;
 }
-.pb-counter strong { color: var(--ink); font-weight: 600; font-size: 14px; letter-spacing: -0.01em; text-transform: none; font-family: var(--font); }
+.pb-counter strong { color: var(--ink); font-weight: 600; font-size: 13px; letter-spacing: -0.01em; text-transform: none; font-family: var(--font); }
 .pb-credit {
   max-width: var(--maxw); margin: 0 auto;
   padding: 0 24px 12px;
@@ -175,6 +180,7 @@ a { color: inherit; }
   color: var(--muted); font-weight: 500;
   display: flex; align-items: center; gap: 8px;
 }
+.pb-chapter-progress { margin-left: auto; opacity: 0.7; }
 .pb-drawer-chapter h4 .swatch { width: 10px; height: 10px; border-radius: 50%; }
 .pb-drawer-page {
   display: block;
@@ -190,9 +196,23 @@ a { color: inherit; }
 }
 .pb-drawer-page:hover { background: var(--bg-2); }
 .pb-drawer-page.current { background: var(--ink); color: var(--bg); font-weight: 500; }
+.pb-drawer-page.visited .num { opacity: 0.4; }
 .pb-drawer-page .num {
   font-family: var(--mono); font-size: 11px; opacity: 0.6; min-width: 24px;
 }
+.pb-drawer-star { margin-left: auto; opacity: 0.25; cursor: pointer; font-size: 14px; flex-shrink: 0; }
+.pb-drawer-star-hit { margin-left: auto; width: 44px; height: 44px; display: grid; place-items: center; flex-shrink: 0; cursor: pointer; }
+.pb-drawer-star-hit .pb-drawer-star { margin-left: 0; }
+.pb-drawer-star:hover { opacity: 0.6; }
+.pb-drawer-star.active { opacity: 1; color: var(--accent); }
+.pb-drawer-page.current .pb-drawer-star.active { color: #FFE94A; }
+.pb-drawer-search { padding: 12px 24px 0; }
+.pb-drawer-search input {
+  width: 100%; padding: 12px 16px; font-family: var(--font); font-size: 14px;
+  border: 1px solid var(--line); border-radius: 100px; background: var(--bg); color: var(--ink); outline: none;
+}
+.pb-drawer-search input:focus { border-color: var(--accent); }
+.pb-drawer-empty { padding: 24px; color: var(--muted); font-size: 14px; text-align: center; }
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
@@ -216,12 +236,14 @@ p { margin: 0; text-wrap: pretty; }
   padding: 6px 12px;
   border: 1px solid var(--line); border-radius: 100px;
   background: var(--bg);
+  white-space: nowrap;
 }
 .chip.solid { background: var(--ink); color: var(--bg); }
 .chip.accent { background: var(--accent); color: #fff; border-color: var(--accent); }
 
 .btn {
   display: inline-flex; align-items: center; gap: 10px;
+  white-space: nowrap;
   padding: 14px 22px;
   background: var(--ink); color: var(--bg);
   border: 1px solid var(--ink); border-radius: 100px;
@@ -266,4 +288,37 @@ p { margin: 0; text-wrap: pretty; }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.01s !important; transition-duration: 0.01s !important; }
+}
+
+/* === Accessibility: focus states + skip link + live region === */
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.pb-skip-link {
+  position: absolute; top: -100px; left: 12px; z-index: 500;
+  background: var(--ink); color: var(--bg);
+  padding: 12px 20px; border-radius: 10px;
+  font-family: var(--font); font-weight: 600; font-size: 14px;
+  text-decoration: none;
+  transition: top 0.15s;
+}
+.pb-skip-link:focus { top: 12px; }
+.pb-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+.pb-continue-banner {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
+  padding: 16px 22px; margin-bottom: 28px; flex-wrap: wrap;
+}
+.pb-continue-banner span { font-size: 15px; }
+.pb-continue-banner strong { font-weight: 600; }
+
+/* === Normal-case relabel: remove all-caps mono styling site-wide === */
+.pb-chapter-label, .pb-counter, .pb-credit, .pb-drawer-chapter h4, .pb-drawer-page .num, .eyebrow, .chip, .tweaks h5, .theme-btn,
+.cover-meta .lbl, .sign-num, .progress-row, .q-opt .lbl, .result-scale, .cl-tab, .tally .lbl, .dd h5,
+.route .label, .route .stat .l, .clinic .name small, .clinic .col .l, .pod-foot, .video-meta .cat,
+.meds-table th, .meds-table td.name small, .meds-table .pill-tag, .help .who, .quote-block .attr,
+.signup-card .eyebrow, .rtc-step, .rtc-preview-head, .rtc-watermark, .loophole-cta-tag, .loophole-hero-meta,
+.loophole-stat-l, .rtc-alert-tag, .route-compare-strip .rc-head, .route-compare-strip .rc-row em {
+  text-transform: none !important;
+  font-family: var(--font) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
 }

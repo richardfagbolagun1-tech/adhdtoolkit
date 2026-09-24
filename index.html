@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Untangle — A free UK ADHD Playbook | Self-check, NHS routes & tools</title>
+<title>Adult ADHD in the UK, explained for free | Untangle</title>
 <meta name="description" content="A free UK ADHD playbook for adults and parents. Self-check, NHS Right to Choose, clinic directory, parent guidance, tools, podcasts, books and crisis support. By Rich Experiments.">
 <meta name="keywords" content="ADHD UK, adult ADHD, ADHD self-check, ASRS test, ADHD Right to Choose, NHS ADHD assessment, ADHD diagnosis UK, ADHD parents, ADHD toolkit">
 <meta name="author" content="Rich Experiments">
@@ -12,16 +12,22 @@
 <meta property="og:url" content="https://untangleyouradhd.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_GB">
-<meta property="og:title" content="Untangle — A free UK ADHD playbook">
+<meta property="og:title" content="Untangle: A free UK ADHD playbook">
 <meta property="og:description" content="The toolkit we wish someone had handed us. Self-check, NHS routes, daily tools, podcasts and crisis support. All free, all UK.">
 <meta property="og:site_name" content="Untangle">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Untangle — UK ADHD Playbook">
+<meta name="twitter:title" content="Untangle: UK ADHD Playbook">
 <meta name="twitter:description" content="The toolkit we wish someone had handed us.">
 <meta name="theme-color" content="#FF5A36">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath d='M4 14 C 4 8, 8 4, 14 4 S 24 8, 24 14 S 20 24, 14 24 S 4 20, 4 14 Z' fill='none' stroke='%23FF5A36' stroke-width='2.4'/%3E%3Cpath d='M8 10 C 12 14, 16 10, 20 14 M8 18 C 12 14, 16 18, 20 14' fill='none' stroke='%23FF5A36' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Untangle","alternateName":"Untangle ADHD Playbook","description":"A free UK ADHD playbook for adults and parents.","inLanguage":"en-GB","publisher":{"@type":"Organization","name":"Rich Experiments","url":"https://richexperiments.com"}}
 </script>
+<link rel="preload" as="image" href="assets/cover-1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="preload" as="script" href="playbook.bundle.js">
 <link rel="stylesheet" href="playbook.css">
 <link rel="stylesheet" href="playbook-pages.css">
 <style media="print">
@@ -111,7 +117,8 @@ window.R = (function(){
         if(window.__resources && window.__resources[id]) cache[c] = window.__resources[id];
       });
     }
-    return cache[url] || url;
+    if (cache[url]) return cache[url];
+    return url.indexOf("images.unsplash.com") >= 0 && url.indexOf("auto=format") < 0 ? url + "&auto=format" : url;
   };
 })();
 </script>
@@ -119,320 +126,11 @@ window.R = (function(){
 <body>
 <div id="app"></div>
 
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="vendor/react.production.min.js"></script>
+<script src="vendor/react-dom.production.min.js"></script>
+<script src="image-slot.js"></script>
 
-<script type="text/babel" src="playbook-content-1.jsx"></script>
-<script type="text/babel" src="playbook-content-2.jsx"></script>
-<script type="text/babel" src="playbook-content-3.jsx"></script>
-<script type="text/babel" src="playbook-content-4.jsx"></script>
-<script type="text/babel" src="playbook-content-5.jsx"></script>
-<script type="text/babel" src="playbook-content-6.jsx"></script>
-<script type="text/babel" src="playbook-content-7.jsx"></script>
-<script type="text/babel" src="playbook-content-8.jsx"></script>
-<script type="text/babel" src="playbook-content-9.jsx"></script>
-<script type="text/babel" src="playbook-content-10.jsx"></script>
-<script type="text/babel" src="playbook-content-11.jsx"></script>
-<script type="text/babel" src="playbook-content-12.jsx"></script>
-<script type="text/babel" src="playbook-content-13.jsx"></script>
-<script type="text/babel" src="playbook-content-14.jsx"></script>
-<script type="text/babel" src="playbook-content-feedback.jsx"></script>
 
-<script type="text/babel">
-const { useState, useEffect, useMemo, useRef } = React;
-
-const CHAPTERS = [
-  { id: "intro",    label: "Welcome",            color: "#FF5A36" },
-  { id: "self",     label: "Could I have ADHD?", color: "#FF5A36" },
-  { id: "parents",  label: "For parents",        color: "#9FB89A" },
-  { id: "test",     label: "Get tested",         color: "#8AB4C8" },
-  { id: "tools",    label: "Daily tools",        color: "#E8B948" },
-  { id: "podcasts", label: "Podcasts",           color: "#1DB954" },
-  { id: "videos",   label: "Videos",             color: "#6B4D7A" },
-  { id: "meds",     label: "Medication",         color: "#FF5A36" },
-  { id: "work",     label: "Work & study",       color: "#8AB4C8" },
-  { id: "support",  label: "Get help now",       color: "#FF5A36" },
-  { id: "end",      label: "Close",              color: "#1A1814" },
-];
-
-function BrandMark() {
-  return (
-    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M4 14 C 4 8, 8 4, 14 4 S 24 8, 24 14 S 20 24, 14 24 S 4 20, 4 14 Z" stroke="currentColor" strokeWidth="2"/>
-      <path d="M8 10 C 12 14, 16 10, 20 14 M8 18 C 12 14, 16 18, 20 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-    </svg>
-  );
-}
-
-function App() {
-  // Build the full sequential page list
-  const PAGES = useMemo(() => {
-    const cover = { ch: "intro", title: "Welcome", render: (ctx) => <window.PB_COVER onStart={() => ctx.go(1)} total={ctx.total} /> };
-    const end = { ch: "end", title: "Close", render: (ctx) => <window.PB_END onRestart={() => ctx.go(0)} onJump={(chId) => ctx.jumpToChapter(chId)} /> };
-    // Splice extra pages into the right chapter slots
-    // Chapter 1.5 inserts after self
-    const p1_3 = [...(window.PB_PAGES_1_3 || [])];
-    // Insert intro pages (how-to + skim + what ADHD is) at the very start of the self chapter
-    const firstSelfIdx = p1_3.map(p => p.ch).indexOf("self");
-    if (firstSelfIdx >= 0) {
-      const intros = [...(window.PB_PAGES_EXTRA_INTRO || []), ...(window.PB_PAGES_EXTRA_BEFORE_SELF || [])];
-      if (intros.length) p1_3.splice(firstSelfIdx, 0, ...intros);
-    }
-    const lastSelfIdx = p1_3.map(p => p.ch).lastIndexOf("self");
-    const selfExtras = [...(window.PB_PAGES_EXTRA_AFTER_SELF || []), ...(window.PB_PAGES_EXTRA_AFTER_SELF_2 || []), ...(window.PB_PAGES_EXTRA_AFTER_SELF_3 || []), ...(window.PB_PAGES_EXTRA_AFTER_SELF_4 || []), ...(window.PB_PAGES_EXTRA_AFTER_SELF_5 || [])];
-    if (lastSelfIdx >= 0 && selfExtras.length) p1_3.splice(lastSelfIdx + 1, 0, ...selfExtras);
-    // Append child books after the last parents page
-    const lastParentsIdx = p1_3.map(p => p.ch).lastIndexOf("parents");
-    if (lastParentsIdx >= 0 && window.PB_PAGES_EXTRA_CHILD_BOOKS) p1_3.splice(lastParentsIdx + 1, 0, ...window.PB_PAGES_EXTRA_CHILD_BOOKS);
-    // Test chapter inserts (Right to Choose / shared care) - splice at end of 'test' pages
-    const lastTestIdx = p1_3.map(p => p.ch).lastIndexOf("test");
-    if (lastTestIdx >= 0 && window.PB_PAGES_EXTRA_TESTED) p1_3.splice(lastTestIdx + 1, 0, ...window.PB_PAGES_EXTRA_TESTED);
-    // GP letter generator slots after the test pages
-    const lastTestIdx2 = p1_3.map(p => p.ch).lastIndexOf("test");
-    if (lastTestIdx2 >= 0 && window.PB_PAGES_EXTRA_RTC_GEN) p1_3.splice(lastTestIdx2 + 1, 0, ...window.PB_PAGES_EXTRA_RTC_GEN);
-    // Tools extras
-    const p4_6 = [...(window.PB_PAGES_4_6 || [])];
-    const lastToolsIdx = p4_6.map(p => p.ch).lastIndexOf("tools");
-    if (lastToolsIdx >= 0 && window.PB_PAGES_EXTRA_AFTER_TOOLS) p4_6.splice(lastToolsIdx + 1, 0, ...window.PB_PAGES_EXTRA_AFTER_TOOLS);
-    // Time blindness page into tools
-    const lastToolsIdx2 = p4_6.map(p => p.ch).lastIndexOf("tools");
-    if (lastToolsIdx2 >= 0 && window.PB_PAGES_EXTRA_TOOLS_TIME) p4_6.splice(lastToolsIdx2 + 1, 0, ...window.PB_PAGES_EXTRA_TOOLS_TIME);
-    const lastToolsIdx3 = p4_6.map(p => p.ch).lastIndexOf("tools");
-    if (lastToolsIdx3 >= 0 && window.PB_PAGES_EXTRA_TOOLS_2) p4_6.splice(lastToolsIdx3 + 1, 0, ...window.PB_PAGES_EXTRA_TOOLS_2);
-    // Meds & work extras inserted into p7_9
-    const p7_9 = [...(window.PB_PAGES_7_9 || [])];
-    const lastMedsIdx = p7_9.map(p => p.ch).lastIndexOf("meds");
-    if (lastMedsIdx >= 0 && window.PB_PAGES_EXTRA_MEDS) p7_9.splice(lastMedsIdx + 1, 0, ...window.PB_PAGES_EXTRA_MEDS);
-    const lastWorkIdx = p7_9.map(p => p.ch).lastIndexOf("work");
-    if (lastWorkIdx >= 0 && window.PB_PAGES_EXTRA_WORK) p7_9.splice(lastWorkIdx + 1, 0, ...window.PB_PAGES_EXTRA_WORK);
-    // MP letter generator into support chapter
-    const lastSupportIdx = p7_9.map(p => p.ch).lastIndexOf("support");
-    if (lastSupportIdx >= 0 && window.PB_PAGES_EXTRA_SUPPORT_MP) p7_9.splice(lastSupportIdx + 1, 0, ...window.PB_PAGES_EXTRA_SUPPORT_MP);
-    const lastSupportIdx2 = p7_9.map(p => p.ch).lastIndexOf("support");
-    if (lastSupportIdx2 >= 0 && window.PB_PAGES_EXTRA_SUPPORT_LOVED) p7_9.splice(lastSupportIdx2 + 1, 0, ...window.PB_PAGES_EXTRA_SUPPORT_LOVED);
-    // Practical + reference pages before end (still tagged 'support' for drawer grouping)
-    const tail = [...(window.PB_PAGES_EXTRA_BEFORE_END || []), ...(window.PB_PAGES_EXTRA_PRACTICAL || []), ...(window.PB_PAGES_EXTRA_REFERENCE || []), ...(window.PB_PAGES_EXTRA_FEEDBACK || [])];
-    return [cover, ...p1_3, ...p4_6, ...p7_9, ...tail, end];
-  }, []);
-
-  const total = PAGES.length;
-
-  // Initial page from hash
-  const initialIdx = (() => {
-    const m = location.hash.match(/p=(\d+)/);
-    if (m) return Math.max(0, Math.min(total - 1, parseInt(m[1]) - 1));
-    return 0;
-  })();
-  const [idx, setIdx] = useState(initialIdx);
-  const [direction, setDirection] = useState("forward");
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const [tweaksOpen, setTweaksOpen] = useState(false);
-  const [theme, setTheme] = useState(localStorage.getItem("untangle-theme") || "warm");
-
-  // Theme application
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme === "warm" ? "" : theme);
-    localStorage.setItem("untangle-theme", theme);
-  }, [theme]);
-
-  // Keep hash in sync
-  useEffect(() => {
-    const next = `#p=${idx + 1}`;
-    if (location.hash !== next) history.replaceState(null, "", next);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [idx]);
-
-  // Hash listener (back/forward)
-  useEffect(() => {
-    const onHash = () => {
-      const m = location.hash.match(/p=(\d+)/);
-      if (m) {
-        const target = Math.max(0, Math.min(total - 1, parseInt(m[1]) - 1));
-        setIdx(target);
-      }
-    };
-    window.addEventListener("hashchange", onHash);
-    return () => window.removeEventListener("hashchange", onHash);
-  }, [total]);
-
-  // Keyboard nav
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.target.tagName === "INPUT" || e.target.tagName === "SELECT" || e.target.tagName === "TEXTAREA") return;
-      if (e.key === "ArrowRight") go(idx + 1);
-      if (e.key === "ArrowLeft") go(idx - 1);
-      if (e.key === "Escape") { setDrawerOpen(false); setTweaksOpen(false); }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  });
-
-  // Open drawer event from cover
-  useEffect(() => {
-    const onOpen = () => setDrawerOpen(true);
-    const onLoophole = () => {
-      const i = PAGES.findIndex(p => p.title && p.title.indexOf("Fast Track") >= 0);
-      if (i >= 0) setIdx(i);
-    };
-    const onFeedback = () => {
-      const i = PAGES.findIndex(p => p.title && p.title.indexOf("Give feedback") >= 0);
-      if (i >= 0) setIdx(i);
-    };
-    window.addEventListener("pb-open-drawer", onOpen);
-    window.addEventListener("pb-jump-loophole", onLoophole);
-    window.addEventListener("pb-jump-feedback", onFeedback);
-    return () => {
-      window.removeEventListener("pb-open-drawer", onOpen);
-      window.removeEventListener("pb-jump-loophole", onLoophole);
-      window.removeEventListener("pb-jump-feedback", onFeedback);
-    };
-  }, [PAGES]);
-
-  // WordPress iframe height messaging
-  useEffect(() => {
-    const send = () => {
-      try {
-        const h = document.documentElement.scrollHeight;
-        window.parent.postMessage({ untangleHeight: h }, "*");
-      } catch(e){}
-    };
-    send();
-    const t = setTimeout(send, 400);
-    return () => clearTimeout(t);
-  }, [idx]);
-
-  // Touch swipe
-  const touchRef = useRef({ x: 0, y: 0 });
-  function onTouchStart(e) { touchRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY }; }
-  function onTouchEnd(e) {
-    const dx = e.changedTouches[0].clientX - touchRef.current.x;
-    const dy = e.changedTouches[0].clientY - touchRef.current.y;
-    if (Math.abs(dx) > 80 && Math.abs(dy) < 60) {
-      if (dx < 0) go(idx + 1); else go(idx - 1);
-    }
-  }
-
-  function go(n) {
-    if (n < 0 || n >= total || n === idx) return;
-    setDirection(n > idx ? "forward" : "back");
-    setIdx(n);
-  }
-  function jumpToChapter(chId) {
-    const i = PAGES.findIndex(p => p.ch === chId);
-    if (i >= 0) go(i);
-  }
-
-  const page = PAGES[idx];
-  const chapter = CHAPTERS.find(c => c.id === page.ch) || CHAPTERS[0];
-  const pct = ((idx + 1) / total) * 100;
-  const ctx = { go, jumpToChapter, total };
-
-  // Group pages by chapter for drawer
-  const chapterGroups = useMemo(() => {
-    const groups = {};
-    PAGES.forEach((p, i) => { (groups[p.ch] = groups[p.ch] || []).push({...p, idx: i}); });
-    return groups;
-  }, [PAGES]);
-
-  const themes = [
-    { name: "warm", label: "Warm", swatch: "#FF5A36" },
-    { name: "cool", label: "Cool", swatch: "#2C5FCC" },
-    { name: "contrast", label: "Contrast", swatch: "#000" },
-    { name: "dark", label: "Dark", swatch: "#FF6F4D" },
-  ];
-
-  return (
-    <div className="pb-app" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
-      <header className="pb-top">
-        <div className="pb-top-row">
-          <button className="pb-brand" onClick={() => go(0)} title="Back to cover">
-            <BrandMark />
-            <span>Untangle</span>
-          </button>
-          <div className="pb-chapter-label">
-            <span className="pb-chapter-dot" style={{background: chapter.color}}></span>
-            <span>{chapter.id === "intro" ? "Welcome" : chapter.id === "end" ? "End" : chapter.label}</span>
-            <span style={{opacity:0.5}}>·</span>
-            <span>{page.title}</span>
-          </div>
-          <div className="pb-top-actions">
-            <button className="pb-icon-btn" onClick={() => setTweaksOpen(o => !o)} title="Theme">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-            </button>
-            <button className="pb-icon-btn" onClick={() => setDrawerOpen(true)} title="Contents">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-            </button>
-          </div>
-        </div>
-        <div className="pb-progress"><div style={{ width: `${pct}%` }}></div></div>
-      </header>
-
-      <main className="pb-stage">
-        <div key={idx} className={`pb-page ${direction === "back" ? "back" : ""}`}>
-          {page.render(ctx)}
-        </div>
-      </main>
-
-      <footer className="pb-bottom">
-        <div className="pb-bottom-row">
-          <button className="pb-nav-btn pb-prev" onClick={() => go(idx - 1)} disabled={idx === 0}>
-            <span>←</span><span className="full-label">Previous</span>
-          </button>
-          <div className="pb-counter">
-            <strong>{idx + 1}</strong> <span>/ {total}</span>
-          </div>
-          <button className="pb-nav-btn next pb-next" onClick={() => go(idx + 1)} disabled={idx === total - 1}>
-            <span className="full-label">{idx === 0 ? "Start" : idx === total - 2 ? "Finish" : "Next"}</span><span>→</span>
-          </button>
-        </div>
-        <p className="pb-credit">Made with love by <a href="https://richexperiments.com" target="_blank" rel="noopener"><strong>Rich Experiments</strong></a></p>
-      </footer>
-
-      {/* Drawer */}
-      <div className={`pb-drawer-overlay ${drawerOpen ? "open" : ""}`} onClick={() => setDrawerOpen(false)}></div>
-      <aside className={`pb-drawer ${drawerOpen ? "open" : ""}`}>
-        <div className="pb-drawer-head">
-          <h3>Contents</h3>
-          <button className="pb-icon-btn" onClick={() => setDrawerOpen(false)}>✕</button>
-        </div>
-        <div className="pb-drawer-list">
-          {CHAPTERS.map(ch => {
-            const pages = chapterGroups[ch.id] || [];
-            if (!pages.length) return null;
-            return (
-              <div key={ch.id} className="pb-drawer-chapter">
-                <h4><span className="swatch" style={{background: ch.color}}></span>{ch.label}</h4>
-                {pages.map(p => (
-                  <button key={p.idx} className={`pb-drawer-page ${p.idx === idx ? "current" : ""}`} onClick={() => { go(p.idx); setDrawerOpen(false); }}>
-                    <span className="num">{String(p.idx + 1).padStart(2,"0")}</span>
-                    <span>{p.title}</span>
-                  </button>
-                ))}
-              </div>
-            );
-          })}
-        </div>
-      </aside>
-
-      {/* Tweaks panel */}
-      <div className={`tweaks-overlay ${tweaksOpen ? "open" : ""}`} onClick={() => setTweaksOpen(false)}></div>
-      <div className={`tweaks ${tweaksOpen ? "open" : ""}`}>
-        <button className="tweaks-close" onClick={() => setTweaksOpen(false)} aria-label="Close">✕</button>
-        <h5>Colour theme</h5>
-        <div className="theme-grid">
-          {themes.map(t => (
-            <button key={t.name} className={`theme-btn ${theme === t.name ? "active" : ""}`} onClick={() => setTheme(t.name)}>
-              <span className="swatch" style={{background: t.swatch}}></span>{t.label}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-ReactDOM.createRoot(document.getElementById("app")).render(<App />);
-</script>
+<script src="playbook.bundle.js"></script>
 </body>
 </html>

@@ -67,6 +67,7 @@
 .pb-cover-active .pb-icon-btn:hover { background: rgba(255,255,255,0.15); color: #fff; }
 .pb-cover-active .pb-nav-btn:hover:not(:disabled) { background: rgba(255,255,255,0.15); color: #fff; }
 .pb-cover-active .pb-nav-btn.next { background: var(--accent); border-color: var(--accent); color: #fff; }
+@media (max-width: 1024px) { .pb-cover-active .pb-bottom { position: static; } .pb-cover-active .pb-page-cover { padding-bottom: 24px; } }
 
 /* === Numbered-content presentation patterns (accordion / slider / tabs / truncated) === */
 .pbn-acc-row { cursor: pointer; }

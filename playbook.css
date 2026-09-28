@@ -48,7 +48,7 @@ a { color: inherit; }
   border-bottom: 1px solid var(--line);
 }
 .pb-top-row {
-  max-width: var(--maxw); margin: 0 auto;
+  max-width: none; margin: 0;
   padding: 14px 24px;
   display: flex; align-items: center; gap: 24px;
 }
@@ -116,7 +116,7 @@ a { color: inherit; }
   border-top: 1px solid var(--line);
 }
 .pb-bottom-row {
-  max-width: var(--maxw); margin: 0 auto;
+  max-width: none; margin: 0;
   padding: 14px 24px;
   display: grid; grid-template-columns: 1fr auto 1fr;
   gap: 20px; align-items: center;

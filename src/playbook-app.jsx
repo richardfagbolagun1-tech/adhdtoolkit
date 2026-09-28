@@ -374,15 +374,15 @@ function App() {
       <footer className="pb-bottom">
         <div className="pb-bottom-row">
           {idx > 0 ? (
-            <button className="pb-nav-btn pb-prev" onClick={() => go(idx - 1)}>
-              <span className="full-label">Previous</span>
+            <button className="pb-nav-btn pb-prev" aria-label="Previous page" onClick={() => go(idx - 1)}>
+              <span className="mob-arrow" aria-hidden="true">←</span><span className="full-label">Previous</span>
             </button>
           ) : <div></div>}
           <div className="pb-counter">
             <strong>{idx + 1}</strong> <span>/ {total}</span>
           </div>
-          <button className="pb-nav-btn next pb-next" onClick={() => go(idx + 1)} disabled={idx === total - 1}>
-            <span className="full-label">{idx === 0 ? "Start" : idx === total - 2 ? "Finish" : "Next"}</span>
+          <button className="pb-nav-btn next pb-next" aria-label={idx === 0 ? "Start" : "Next page"} onClick={() => go(idx + 1)} disabled={idx === total - 1}>
+            <span className="full-label">{idx === 0 ? "Start" : idx === total - 2 ? "Finish" : "Next"}</span><span className="mob-arrow" aria-hidden="true">→</span>
           </button>
         </div>
         <p className="pb-credit">Made with love by <a href="https://richexperiments.com" target="_blank" rel="noopener"><strong>Rich Experiments</strong></a></p>

@@ -148,6 +148,7 @@ a { color: inherit; }
 .pb-nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
 .pb-nav-btn.next { background: var(--accent); border-color: var(--accent); color: #fff; }
 .pb-nav-btn.next:hover:not(:disabled) { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.pb-nav-btn .mob-arrow { display: none; }
 .pb-prev { justify-self: start; }
 .pb-next { justify-self: end; }
 
@@ -286,6 +287,8 @@ p { margin: 0; text-wrap: pretty; }
   .pb-bottom-row { padding: 12px 16px; gap: 8px; }
   .pb-nav-btn { padding: 10px 16px; font-size: 13px; }
   .pb-nav-btn .full-label { display: none; }
+  .pb-nav-btn .mob-arrow { display: inline; font-size: 20px; line-height: 1; }
+  .pb-nav-btn { min-width: 48px; min-height: 44px; justify-content: center; }
   .pb-chapter-label { font-size: 10px; }
 }
 

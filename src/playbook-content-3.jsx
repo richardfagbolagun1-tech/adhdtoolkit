@@ -279,7 +279,7 @@ function PageCover({onStart, total, resumeIdx, resumeTitle}) {
       </div>
       <div className="cover-hero-scrim"></div>
       <div className="cover-hero-content">
-        <p className="cover-tagline">The toolkit I wish I'd found when I was younger.</p>
+        <p className="cover-tagline">The website I wish I'd found when I was younger.</p>
         <h1><span className="accent">Untangle</span> your ADHD brain.</h1>
         <p className="lede">A free guide for adults who wonder if they have ADHD, for parents trying to make sense of their child, and for anyone learning to live well with a brain that is wired differently from most.</p>
         <div className="actions">

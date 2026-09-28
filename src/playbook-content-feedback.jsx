@@ -21,7 +21,7 @@ function PageFeedback() {
   // Brevo feedback form (created in Brevo → Contacts → Forms).
   // Custom attributes used on the form: NAME, TYPE, PAGE, MESSAGE (plus the built-in EMAIL).
   const FEEDBACK_FORM_URL = "https://16b6a1b0.sibforms.com/serve/MUIFACNTV84VnUaEgd_KqgvtyrB5Tpnbtkywdgj_B7EG0r_Yn8poCxZ8lPiC2PecKIO7H-GmIf0hj63vwsDXKajGPxaqconB8gKSGpkbSmzPkOikKZzGFZqB2yED11w1TMdpxysHJPotprZU6xhD8OVDwNfdte2sVJZ148EFE7skJm1M4FN72XNUBEbLcIFl7N22xIdlRolDCcYCgQ==";
-  const FEEDBACK_EMAIL    = "hello@untangleyouradhd.co.uk";  // fallback if the form URL is ever blanked
+  const FEEDBACK_EMAIL    = "hello@untangleyouradhd.com";  // fallback if the form URL is ever blanked
 
   // Restore any in-progress draft
   React.useEffect(() => {

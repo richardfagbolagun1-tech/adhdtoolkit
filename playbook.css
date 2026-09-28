@@ -1,5 +1,7 @@
 /* Untangle Playbook — design tokens + chrome */
 
+@font-face { font-family: "Untangle Digits"; src: url("assets/fonts/untangle-digits.woff2") format("woff2"); font-weight: 400 800; font-style: normal; font-display: swap; unicode-range: U+0030-0039; }
+
 :root {
   --bg: #F4EFE6;
   --bg-2: #ECE4D5;
@@ -16,9 +18,10 @@
   --sky: #8AB4C8;
   --spotify: #1DB954;
   --maxw: 1280px;
-  --font: "Outfit", system-ui, sans-serif;
-  --serif: "Instrument Serif", "Times New Roman", serif;
-  --mono: "JetBrains Mono", ui-monospace, monospace;
+  --font: "Untangle Digits", "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --display: "Untangle Digits", "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --serif: "Untangle Digits", "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --mono: "Untangle Digits", "Atkinson Hyperlegible Next", system-ui, sans-serif;
 }
 [data-theme="cool"] { --bg:#EAEEF0; --bg-2:#DCE3E6; --paper:#F3F6F7; --ink:#0E1A1F; --ink-2:#2A3940; --muted:#5C6B72; --line:#0E1A1F; --accent:#2C5FCC; }
 [data-theme="contrast"] { --bg:#FFF; --bg-2:#F2F2F2; --paper:#FFF; --ink:#000; --ink-2:#111; --muted:#444; --line:#000; --accent:#FF2D00; }

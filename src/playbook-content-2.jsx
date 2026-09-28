@@ -6,12 +6,12 @@ const FRAMEWORKS = [
     num: "1",
     name: "Body doubling",
     when: "When you can't start",
-    photo: R("https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80"),
+    photo: "assets/body-doubling-laptops.webp",
     lede: "Sit alongside another person, in real life or on video, while you both work on your own thing. Their presence anchors yours.",
     steps: [
-      { h: "Pick a buddy", b: "A friend, a colleague, or honestly a complete stranger on a body-doubling app like Focusmate or Flow Club, all of these work just as well." },
-      { h: "Set a timer", b: "Agree a window before you start, fifty minutes seems to be the sweet spot for most people. Say what you're each working on at the top so you're both anchored." },
-      { h: "Stay quiet, stay visible", b: "Don't chat your way through it, the magic is parallel presence rather than conversation. Camera on if you're doing this remotely, it really does make a difference." },
+      { h: "Pick a buddy", b: "A friend, a colleague, or a complete stranger on a body-doubling app like Focusmate or Flow Club, all of these work just as well." },
+      { h: "Set a timer", b: "Agree a window before you start, many people find fifty minutes works well. Say what you're each working on at the top so you're both anchored." },
+      { h: "Stay quiet, stay visible", b: "Don't chat your way through it, it works because you are both working, not talking. If you are doing this online, many people find it helps to keep cameras on." },
     ],
   },
   {
@@ -19,7 +19,7 @@ const FRAMEWORKS = [
     num: "2",
     name: "Pomodoro",
     when: "When you can't focus",
-    photo: R("https://images.unsplash.com/photo-1495364141860-b0d03eccd065?w=900&q=80"),
+    photo: "assets/pomodoro-clock.webp",
     lede: "Work in 25-minute sprints with 5-minute breaks. ADHD brains hate open-ended tasks. Pomodoro gives them a finish line.",
     steps: [
       { h: "Pick one task", b: "One thing, not three. Write it down on the page in front of you so your brain has something to come back to when it drifts, because it will drift." },
@@ -32,10 +32,10 @@ const FRAMEWORKS = [
     num: "3",
     name: "Eisenhower matrix",
     when: "When you're overwhelmed",
-    photo: R("https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=900&q=80"),
+    photo: "assets/eisenhower-notebook.webp",
     lede: "Sort everything on your plate into four boxes: urgent or not, important or not. Most ADHD overwhelm comes from treating everything as urgent.",
     steps: [
-      { h: "Brain-dump", b: "Get every single task out of your head and onto the page, no order, no judgement, no editing as you go. The point is the emptying, not the list." },
+      { h: "Brain-dump", b: "Get every single task out of your head and onto the page, no order, no judgement, no editing as you go. Emptying your head matters more than the list itself." },
       { h: "Sort into the grid", b: "Urgent and important goes in 'do now'. Important but not urgent goes in 'schedule'. Urgent but not important goes in 'delegate or shrink'. Neither goes in the bin." },
       { h: "Trust the bottom-right bin", b: "ADHD brains love to hoard 'maybe one day' tasks that drain attention without ever getting done. They're noise pretending to be work. Delete them with confidence." },
     ],
@@ -45,7 +45,7 @@ const FRAMEWORKS = [
     num: "4",
     name: "1-3-5 brain dump",
     when: "When the day feels too big",
-    photo: R("https://images.unsplash.com/photo-1517842645767-c639042777db?w=900&q=80"),
+    photo: "assets/brain-dump-notes.webp",
     lede: "Empty everything onto paper. Then pick one big thing, three medium things, and five small things. That's the day.",
     steps: [
       { h: "Dump for 10 minutes", b: "Every task, every errand, every worry, get it all on the page. Don't filter, don't organise, don't tidy as you go. Just empty the brain." },
@@ -58,12 +58,12 @@ const FRAMEWORKS = [
     num: "5",
     name: "Dopamine menu",
     when: "When everything feels flat",
-    photo: "assets/page-45-dopamine-menu.jpg",
+    photo: "assets/page-45-dopamine-menu.webp",
     lede: "Build a list of small reliable joys. When you're flat or shutdown, pick one. Stop scrolling, start regulating.",
     steps: [
-      { h: "Make four columns", b: "Starters (about 5 minutes), mains (around 30), sides (things you do in the background), and desserts (proper treats). Three to five things you genuinely enjoy in each." },
+      { h: "Make four columns", b: "Starters (about 5 minutes), mains (around 30), sides (things you do in the background), and desserts (proper treats). Three to five things you enjoy in each." },
       { h: "Stick it on the fridge", b: "Somewhere external and visible, because when your brain is offline you don't want to be making decisions, you want to be reading them." },
-      { h: "Order off the menu", b: "Next time you're stuck, just pick one. Don't deliberate, don't optimise. The whole point is that the menu has already made the choice for you." },
+      { h: "Order off the menu", b: "Next time you're stuck, just pick one. Don't overthink it. The menu has already made the choice for you." },
     ],
   },
   {
@@ -71,12 +71,12 @@ const FRAMEWORKS = [
     num: "6",
     name: "Spoons mapping",
     when: "When you keep crashing",
-    photo: "assets/page-46-spoons.jpg",
-    lede: "Map your daily energy. ADHD energy isn't linear, it's a series of waves. Plan around them or pay the price.",
+    photo: "assets/page-46-spoons.webp",
+    lede: "Map your daily energy. ADHD energy comes in waves. Plan around them or pay the price.",
     steps: [
-      { h: "Track for a week", b: "Note your energy hour by hour on a scale of one to ten. Look for your peaks, for most ADHDers they fall somewhere around 10am to noon, or 4pm to 7pm." },
+      { h: "Track for a week", b: "Note your energy hour by hour on a scale of one to ten. Look for your peaks, they differ from person to person, so track yours for a week." },
       { h: "Schedule hard tasks at peaks", b: "Stop trying to write hard things at 3pm if 3pm is your trough. Move admin and emails into the troughs and save the thinking work for when your brain is online." },
-      { h: "Protect the troughs", b: "When the dip hits, lie down, walk, eat protein, do anything except fight it with caffeine and shame. That always crashes you harder later." },
+      { h: "Protect the troughs", b: "When the dip hits, lie down, walk, eat protein, do anything except fight it with caffeine and shame. That can leave you more tired later." },
     ],
   },
 ];
@@ -88,9 +88,9 @@ function PageToolsIntro() {
         <div>
           <span className="chip" style={{background:"var(--mustard)", borderColor:"var(--mustard)", color:"var(--ink)"}}>Chapter 4 · Daily tools</span>
           <h2 style={{marginTop:16}}>Six tools that <span className="accent">actually</span><br/>work for ADHD brains.</h2>
-          <p className="lede">You can skip the productivity gurus. These are the six small frameworks our community keeps quietly recommending to each other when life gets loud. We've given each one its own page so you can really sit with it. Pick the one that sounds gentlest, and try it for a week.</p>
+          <p className="lede">Six small methods that people with ADHD recommend to each other. Each has its own page. Pick the one that sounds easiest and try it for a week. You do not need a diagnosis to try any of them. Take what helps and leave the rest.</p>
         </div>
-        <div className="ph-photo" style={{backgroundImage:`url('assets/page-40-tools.jpg')`}}></div>
+        <div className="ph-photo" style={{backgroundImage:`url('assets/page-40-tools.webp')`}}></div>
       </div>
     </div>
   );
@@ -120,18 +120,18 @@ function PageFramework({fw}) {
 // =================== CHAPTER 5: PODCASTS ===================
 
 const PODCASTS = [
-  { name: "ADHD Chatter", host: "Alex Partridge", desc: "Long-form interviews from a UK host who was diagnosed at 35. Funny, honest, and deeply useful.", cv: { initials: "AC", c1: "#FF5A36", c2: "#1A1814" }, url: "https://open.spotify.com/show/6F0Yb1xPTKzZSb4mTcZUkj", country: "UK" },
-  { name: "ADHD for Smart Ass Women", host: "Tracy Otsuka", desc: "Specifically for late-diagnosed women. Reframes ADHD as a strength.", cv: { initials: "SA", c1: "#E8B948", c2: "#6B4D7A" }, url: "https://open.spotify.com/show/5UmIQAv0KZ4yhDDeYW1ULd", country: "US" },
-  { name: "I Have ADHD Podcast", host: "Kristen Carder", desc: "Non-judgmental, weekly. Strong on emotional regulation and shame.", cv: { initials: "IH", c1: "#8AB4C8", c2: "#1A1814" }, url: "https://open.spotify.com/show/3xQU9pPePvA6tdQwGAv6JS", country: "US" },
-  { name: "The ADHD Adults Podcast", host: "James Brown & co", desc: "UK-based. Three ADHD adults talking research, lived experience, and tangents.", cv: { initials: "AA", c1: "#9FB89A", c2: "#1A1814" }, url: "https://open.spotify.com/show/0wxHB6QvU2YbnNHaJiQqLJ", country: "UK" },
+  { name: "ADHD Chatter", host: "Alex Partridge", desc: "Long interviews from a UK host who was diagnosed at 35. Funny and useful.", cv: { initials: "AC", c1: "#FF5A36", c2: "#1A1814" }, url: "https://open.spotify.com/show/6F0Yb1xPTKzZSb4mTcZUkj", country: "UK" },
+  { name: "ADHD for Smart Ass Women", host: "Tracy Otsuka", desc: "For women diagnosed later in life. Focuses on strengths.", cv: { initials: "SA", c1: "#E8B948", c2: "#6B4D7A" }, url: "https://open.spotify.com/show/5UmIQAv0KZ4yhDDeYW1ULd", country: "US" },
+  { name: "I Have ADHD Podcast", host: "Kristen Carder", desc: "A weekly show. Good on emotions and shame.", cv: { initials: "IH", c1: "#8AB4C8", c2: "#1A1814" }, url: "https://open.spotify.com/show/3xQU9pPePvA6tdQwGAv6JS", country: "US" },
+  { name: "The ADHD Adults Podcast", host: "James Brown & co", desc: "From the UK. Three adults with ADHD talk about research and their own lives.", cv: { initials: "AA", c1: "#9FB89A", c2: "#1A1814" }, url: "https://open.spotify.com/show/0wxHB6QvU2YbnNHaJiQqLJ", country: "UK" },
   { name: "Hyperfocus", host: "Rae Jacobson", desc: "Short-form, magazine style. Single ADHD topics in 20 minutes.", cv: { initials: "HF", c1: "#6B4D7A", c2: "#FF5A36" }, url: "https://open.spotify.com/show/3wIvtHHoyCKwOWMQpYJWVx", country: "US" },
-  { name: "ADHD Experts", host: "ADDitude Magazine", desc: "Clinicians and researchers, no fluff. Best for the science-curious.", cv: { initials: "AE", c1: "#1A1814", c2: "#E8B948" }, url: "https://open.spotify.com/show/0bAOH2g0nVeGqVuP2KNi33", country: "US" },
-  { name: "Distraction", host: "Dr Edward Hallowell", desc: "From the Dr who literally wrote the book on ADHD. Warm, generous, expert.", cv: { initials: "DT", c1: "#FF5A36", c2: "#8AB4C8" }, url: "https://open.spotify.com/show/4LfTJTLuJdljbsFiUm0H0v", country: "US" },
-  { name: "Translating ADHD", host: "Shelly & Cam", desc: "Two coaches. Practical, gentle, focuses on the 'now what' after diagnosis.", cv: { initials: "TA", c1: "#1DB954", c2: "#1A1814" }, url: "https://open.spotify.com/show/1QQxJqxxScrxnIyhc4lOzh", country: "US" },
-  { name: "ADHD Aha!", host: "Laura Key (Understood)", desc: "Quick listens. People share the moment they realised they had ADHD.", cv: { initials: "AH", c1: "#FFD23F", c2: "#FF5A36" }, url: "https://open.spotify.com/show/5JD6yo08OMfFLPzZNxLXZA", country: "US" },
-  { name: "Squirrels of a Feather", host: "Cathy Rashidian", desc: "Late-diagnosed women. Cosy, warm, like a chat with your most chaotic friend.", cv: { initials: "SF", c1: "#9FB89A", c2: "#6B4D7A" }, url: "https://open.spotify.com/show/4tHANI0Q6VGjOGbjQ26HVU", country: "UK" },
-  { name: "The ADHD Women's Wellbeing Podcast", host: "Kate Moryoussef", desc: "UK podcast. Hormones, perimenopause, ADHD. Hugely needed niche.", cv: { initials: "WW", c1: "#E8B948", c2: "#1A1814" }, url: "https://open.spotify.com/show/4ESjJBVXjOQF1cf6jztU1c", country: "UK" },
-  { name: "Climbing the Walls", host: "Danielle Elliot", desc: "Investigation into the late-diagnosed-women boom. Journalistic, gripping.", cv: { initials: "CW", c1: "#8AB4C8", c2: "#FF5A36" }, url: "https://open.spotify.com/show/2ngL40oHe3cP5xsvJ6HVbX", country: "US" },
+  { name: "ADHD Experts", host: "ADDitude Magazine", desc: "Interviews with clinicians and researchers. Good if you want the science.", cv: { initials: "AE", c1: "#1A1814", c2: "#E8B948" }, url: "https://open.spotify.com/show/0bAOH2g0nVeGqVuP2KNi33", country: "US" },
+  { name: "Distraction", host: "Dr Edward Hallowell", desc: "From a doctor who has written widely on ADHD. Warm and expert.", cv: { initials: "DT", c1: "#FF5A36", c2: "#8AB4C8" }, url: "https://open.spotify.com/show/4LfTJTLuJdljbsFiUm0H0v", country: "US" },
+  { name: "Translating ADHD", host: "Shelly & Cam", desc: "Two coaches talk about what to do after a diagnosis. Practical and kind.", cv: { initials: "TA", c1: "#1DB954", c2: "#1A1814" }, url: "https://open.spotify.com/show/1QQxJqxxScrxnIyhc4lOzh", country: "US" },
+  { name: "ADHD Aha!", host: "Laura Key (Understood)", desc: "Short episodes. People describe the moment they realised they had ADHD.", cv: { initials: "AH", c1: "#FFD23F", c2: "#FF5A36" }, url: "https://open.spotify.com/show/5JD6yo08OMfFLPzZNxLXZA", country: "US" },
+  { name: "Squirrels of a Feather", host: "Cathy Rashidian", desc: "For women diagnosed later in life. Relaxed and friendly.", cv: { initials: "SF", c1: "#9FB89A", c2: "#6B4D7A" }, url: "https://open.spotify.com/show/4tHANI0Q6VGjOGbjQ26HVU", country: "UK" },
+  { name: "The ADHD Women's Wellbeing Podcast", host: "Kate Moryoussef", desc: "A UK podcast about hormones, perimenopause and ADHD.", cv: { initials: "WW", c1: "#E8B948", c2: "#1A1814" }, url: "https://open.spotify.com/show/4ESjJBVXjOQF1cf6jztU1c", country: "UK" },
+  { name: "Climbing the Walls", host: "Danielle Elliot", desc: "A reported series on why so many women are being diagnosed later in life.", cv: { initials: "CW", c1: "#8AB4C8", c2: "#FF5A36" }, url: "https://open.spotify.com/show/2ngL40oHe3cP5xsvJ6HVbX", country: "US" },
 ];
 
 function PagePodcastsIntro() {
@@ -141,9 +141,9 @@ function PagePodcastsIntro() {
         <div>
           <span className="chip" style={{background:"var(--spotify)", borderColor:"var(--spotify)", color:"#000"}}>Chapter 5 · Podcasts</span>
           <h2 style={{marginTop:16}}>Twelve podcasts worth<br/>your <span className="accent">commute</span>.</h2>
-          <p className="lede">Twelve we keep coming back to, gathered from listeners and creators across the UK and the US. No affiliates, no sponsors, just the ones that have helped people in our community feel a bit less alone on the commute. Tap any cover to open it in Spotify right now.</p>
+          <p className="lede">Twelve we keep coming back to, gathered from listeners and creators across the UK and the US. No affiliates or sponsors. Tap any cover to open it in Spotify.</p>
         </div>
-        <div className="ph-photo" style={{backgroundImage:`url('${R("https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=900&q=80")}')`}}></div>
+        <div className="ph-photo" style={{backgroundImage:`url('${"assets/podcasts-earbuds.webp"}')`}}></div>
       </div>
     </div>
   );
@@ -155,7 +155,7 @@ function PagePodcasts({slice, intro}) {
     <div>
       <span className="chip">Chapter 5 · Picks {slice[0]+1}-{slice[1]}</span>
       <h2 style={{marginTop:16, marginBottom: 10}}>Curated on Spotify.</h2>
-      {intro && <p className="lede" style={{marginBottom:12}}>Twelve we keep coming back to, gathered from listeners and creators across the UK and the US. No affiliates, no sponsors, just the ones that have helped people in our community feel a bit less alone on the commute. Tap any cover to open it in Spotify right now.</p>}
+      {intro && <p className="lede" style={{marginBottom:12}}>Twelve we keep coming back to, gathered from listeners and creators across the UK and the US. No affiliates or sponsors. Tap any cover to open it in Spotify.</p>}
       <p style={{fontSize:14, color:"var(--muted)", marginBottom:24}}>Each cover opens the show in Spotify. Real cover artwork sits inside Spotify itself, the swatches below are our visual shorthand so this page works even when an image host is blocked.</p>
       <div className="pod-grid">
         {items.map((p, i) => (
@@ -170,7 +170,7 @@ function PagePodcasts({slice, intro}) {
               <p>{p.desc}</p>
               <div className="pod-foot">
                 <span>{p.country}</span>
-                <span>Open in Spotify →</span>
+                <span>Open in Spotify</span>
               </div>
             </div>
           </a>
@@ -201,9 +201,9 @@ function PageVideosIntro() {
         <div>
           <span className="chip" style={{background:"var(--plum)", borderColor:"var(--plum)", color:"#fff"}}>Chapter 6 · Videos</span>
           <h2 style={{marginTop:16}}>Nine short videos<br/>worth <span className="accent">watching</span>.</h2>
-          <p className="lede">A small library of clips we send people when words on a page aren't quite landing. There are explainers from clinicians, honest lived-experience stories, and a few practical how-tos. None of them are longer than sixteen minutes, so they're easy to fit between meetings or on the bus.</p>
+          <p className="lede">Short videos for when reading isn't working: explainers from clinicians, lived-experience stories and a few practical how-tos. None are longer than sixteen minutes.</p>
         </div>
-        <div className="ph-photo" style={{backgroundImage:`url('${R("https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=900&q=80")}')`}}></div>
+        <div className="ph-photo" style={{backgroundImage:`url('assets/video-sofa.webp')`}}></div>
       </div>
     </div>
   );
@@ -213,10 +213,15 @@ function PageVideos() {
   const featured = "JiwZQNYlGQI"; // Jessica McCabe — Failing at Normal (TEDxBratislava)
   return (
     <div>
-      <span className="chip">Chapter 6 · Library</span>
-      <h2 style={{marginTop:16, marginBottom:10}}>The video library.</h2>
-      <p className="lede" style={{marginBottom:12}}>A small library of clips we send people when words on a page aren't quite landing. There are explainers from clinicians, honest lived-experience stories, and a few practical how-tos. None of them are longer than sixteen minutes, so they're easy to fit between meetings or on the bus.</p>
-      <p style={{color:"var(--ink-2)", fontSize:16, lineHeight:1.55, marginBottom:24}}>One featured talk is embedded below, the rest open in YouTube where each title is searched for you. We avoid hot-linking specific video IDs so this page stays working even when creators rename or unlist a video.</p>
+      <div className="ph ph-stack">
+        <div>
+          <span className="chip">Chapter 6 · Library</span>
+          <h2 style={{marginTop:16, marginBottom:10}}>The video library.</h2>
+          <p className="lede">Short videos for when reading isn't working: explainers from clinicians, lived-experience stories and a few practical how-tos. None are longer than sixteen minutes.</p>
+          <p style={{color:"var(--ink-2)", fontSize:16, lineHeight:1.55, marginTop:16, marginBottom:0}}>One talk plays on this page. The others open a YouTube search for the title, so the links keep working if a video moves.</p>
+        </div>
+        <div className="ph-photo" style={{backgroundImage:`url('assets/video-sofa.webp')`, backgroundPosition:"22% center"}}></div>
+      </div>
 
       <div style={{position:"relative", width:"100%", aspectRatio:"16/9", borderRadius:14, overflow:"hidden", border:"1px solid var(--line)", marginBottom:8, background:"#000"}}>
         <iframe
@@ -239,7 +244,7 @@ function PageVideos() {
             <div className="video-meta" style={{position:"relative", zIndex:1}}>
               <span className="cat" style={{fontSize:12, fontWeight:700, color:"rgba(255,255,255,0.7)"}}>{v.cat}</span>
               <h4 style={{marginTop:6, color:"#f4efe6", fontSize:18, lineHeight:1.3}}>{v.title}</h4>
-              <span style={{display:"inline-block", marginTop:8, fontSize:12, fontWeight:700, color:"#FF8060"}}>Open on YouTube →</span>
+              <span style={{display:"inline-block", marginTop:8, fontSize:12, fontWeight:700, color:"#FF8060"}}>Open on YouTube</span>
             </div>
           </a>
         ))}

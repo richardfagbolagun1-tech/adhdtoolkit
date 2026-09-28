@@ -22,8 +22,8 @@ function PBSlider({ items }) {
       <h4 className="pbn-slide-h"><span className="pbn-slide-count">{i + 1}/{items.length}</span> {it.h}</h4>
       <p>{it.p}</p>
       <div className="pbn-slide-nav">
-        <button onClick={() => setI((i - 1 + items.length) % items.length)} aria-label="Previous">←</button>
-        <button onClick={() => setI((i + 1) % items.length)} aria-label="Next">→</button>
+        <button onClick={() => setI((i - 1 + items.length) % items.length)} aria-label="Previous slide">Previous</button>
+        <button onClick={() => setI((i + 1) % items.length)} aria-label="Next slide">Next</button>
       </div>
     </div>
   );
@@ -73,8 +73,8 @@ function PBSlideAccordion({ items }) {
       <div className="pbn-sacc-top">
         <span className="pbn-slide-num">{i + 1} / {items.length}</span>
         <div className="pbn-slide-nav">
-          <button onClick={() => go(-1)} aria-label="Previous">←</button>
-          <button onClick={() => go(1)} aria-label="Next">→</button>
+          <button onClick={() => go(-1)} aria-label="Previous slide">Previous</button>
+          <button onClick={() => go(1)} aria-label="Next slide">Next</button>
         </div>
       </div>
       <button className="pbn-sacc-h" onClick={() => setOpen(o => !o)} aria-expanded={open}>
@@ -86,4 +86,14 @@ function PBSlideAccordion({ items }) {
   );
 }
 
-Object.assign(window, { PBAccordion, PBSlider, PBTabs, PBTruncated, PBSlideAccordion });
+function PBQuote({ q, who, src }) {
+  return (
+    <figure className="pb-quote">
+      <span className="pb-quote-mark" aria-hidden="true">“</span>
+      <blockquote>{q}</blockquote>
+      <figcaption><strong>{who}</strong>{src ? <span>{src}</span> : null}</figcaption>
+    </figure>
+  );
+}
+
+Object.assign(window, { PBAccordion, PBSlider, PBTabs, PBTruncated, PBSlideAccordion, PBQuote });

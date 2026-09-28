@@ -3,12 +3,11 @@
 const { useState: useS7 } = React;
 
 const RTC_PROVIDERS = [
-  { name: "Psychiatry UK", note: "Largest RTC provider, ~6-8 month wait" },
-  { name: "ADHD 360", note: "Telehealth specialist, ~3-5 month wait" },
-  { name: "Clinical Partners", note: "Multidisciplinary, ~4-6 month wait" },
-  { name: "ProblemShared", note: "Online ADHD service, ~3-5 month wait" },
-  { name: "Dr Julian Medical Group", note: "NHS contracted, growing capacity" },
-  { name: "ADHD Doctors", note: "Newer provider, shorter waits typical" },
+  { name: "Psychiatry UK", note: "One of the largest Right to Choose providers. Waits vary, check current availability" },
+  { name: "ADHD 360", note: "Online assessments. Waits vary, check current availability" },
+  { name: "Clinical Partners", note: "Multidisciplinary team. Waits vary, check current availability" },
+  { name: "ProblemShared", note: "Online ADHD service. Waits vary, check current availability" },
+  { name: "Dr Julian Medical Group", note: "Waits vary, check current availability" },
 ];
 
 function buildLetter(d) {
@@ -31,7 +30,7 @@ Subject: Formal request for an adult ADHD assessment referral under Patient Choi
 
 I am writing to formally request a referral for an adult ADHD assessment under the NHS Patient Choice framework, also known as "Right to Choose".
 
-Under the NHS Constitution and the NHS Choice Framework, I have the legal right, in England, to choose any qualified provider that holds an NHS standard contract for the service I need. I would like to exercise that right and be referred to ${provider}, who hold a relevant NHS contract for adult ADHD assessment.
+I understand that under the NHS Choice Framework in England, patients may be able to choose a provider that holds an NHS contract for the service they need. I would like to exercise that right and be referred to ${provider}, who hold a relevant NHS contract for adult ADHD assessment.
 
 I am requesting this referral because I am experiencing significant ongoing difficulties consistent with ADHD. In particular:
 
@@ -45,7 +44,7 @@ I have completed the World Health Organisation's Adult ADHD Self-Report Scale (A
 
 I understand that, where a provider holds an NHS standard contract with any Integrated Care Board (ICB) or with NHS England, you are able to make a Right to Choose referral and the funding follows the patient. I am asking, kindly but formally, that you process this referral as soon as possible.
 
-If for any reason you feel unable to refer me to ${provider}, I would be grateful if you could write to me explaining the specific clinical or contractual reason, so that I can take this up with the practice manager or the local ICB if needed.
+If for any reason you feel unable to refer me to ${provider}, I would be grateful if you could write to me explaining the specific clinical or contractual reason, so that I understand the next steps.
 
 Thank you for your time and care.
 
@@ -112,10 +111,10 @@ function PageRTCGenerator() {
         <h1 className="loophole-wordmark">
           <span className="loophole-line">The Fast Track</span>
         </h1>
-        <p className="loophole-lede">Most GPs won't tell you this exists. The NHS legally has to refer you to an ADHD clinic of your choosing, on their bill, in months not years. Below is the letter that makes it happen. Fill in seven boxes, hand it to your GP, get assessed for free.</p>
+        <p className="loophole-lede">Most GPs won't tell you this exists. In England, you may be able to ask for referral to an NHS-contracted provider under Right to Choose. Eligibility, provider availability and waiting times vary. Below is the letter that makes it happen. Fill in seven boxes, hand it to your GP, get assessed for free.</p>
         <div className="loophole-stats">
-          <div><span className="loophole-stat-n">4 yrs</span><span className="loophole-stat-l">Typical NHS wait</span></div>
-          <div><span className="loophole-stat-n">3–8 mo</span><span className="loophole-stat-l">With the Fast Track</span></div>
+          <div><span className="loophole-stat-n">2+ yrs</span><span className="loophole-stat-l">Typical NHS wait</span></div>
+          <div><span className="loophole-stat-n">Varies</span><span className="loophole-stat-l">With the Fast Track</span></div>
           <div><span className="loophole-stat-n">£0</span><span className="loophole-stat-l">Cost to you</span></div>
           <div><span className="loophole-stat-n">60 sec</span><span className="loophole-stat-l">To generate</span></div>
         </div>
@@ -123,8 +122,8 @@ function PageRTCGenerator() {
 
       <div className="rtc-alert fx-changed">
         <h3 className="rtc-alert-h">What's changed in 2025–26.</h3>
-        <p className="rtc-alert-p">In late 2025 NHS England introduced <strong>Indicative Activity Plans (IAPs)</strong>, which cap how many Right to Choose ADHD assessments each ICB area funds per year. At least nine ICBs have asked providers to pause new RTC referrals while plans are refreshed, and Coventry &amp; Warwickshire ICB has suspended new adult referrals over 25 entirely (a decision ADHD UK is challenging legally). The Fast Track letter below still works in most of England, but in some postcodes your GP may now reply with "we've been told to pause new referrals". If that happens, it is not your GP being difficult, it is a national policy issue.</p>
-        <p className="rtc-alert-p" style={{marginTop:10}}><strong>What to do if you hit a pause.</strong> Ask the GP for the refusal in writing, citing the IAP. Report the refusal to ADHD UK (adhduk.co.uk) — they keep a live tracker and are using these reports to push for policy change. Then come back to the Before-Private page in this playbook for the things you can do meanwhile.</p>
+        <p className="rtc-alert-p">In 2026, many ICBs agreed <strong>Indicative Activity Plans (IAPs)</strong> with Right to Choose providers. These limit how many assessments each provider is funded to carry out in a year, so some providers may pause new referrals or appointments. Right to Choose still exists, but availability varies by area and provider. Ask your GP, or check ADHD UK, for the latest in your area. Last checked September 2026. The Fast Track letter below can still help you ask for a referral, but in some areas your GP may reply with "we've been told to pause new referrals". If that happens, it is usually because of local funding arrangements rather than your GP's own choice.</p>
+        <p className="rtc-alert-p" style={{marginTop:10}}><strong>What to do if you hit a pause.</strong> Ask the GP to explain the decision in writing. Report the refusal to ADHD UK (adhduk.co.uk), who collect these reports and are using these reports to push for policy change. Then come back to the Before-Private page in this playbook for the things you can do meanwhile.</p>
       </div>
 
       <div className="rtc-gen">
@@ -190,7 +189,7 @@ function PageRTCGenerator() {
 
           <div className="rtc-actions">
             <button type="button" className="btn btn-accent" onClick={copyLetter}>
-              {copied ? "✓ Copied to clipboard" : "Copy letter →"}
+              {copied ? "✓ Copied to clipboard" : "Copy letter"}
             </button>
             <button type="button" className="btn btn-ghost" style={{border:"1px solid var(--line)"}} onClick={downloadLetter}>
               {downloaded ? "✓ Downloaded" : "Download as .txt"}
@@ -211,20 +210,20 @@ function PageRTCGenerator() {
       <div className="rtc-faq">
         <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:28, marginBottom:16}}>Quick questions before you send</h3>
         <div className="rtc-faq-grid">
-          <div className="card"><h4>Will my GP actually do this?</h4><p>Most will, and Right to Choose is statutory rather than optional. If your GP refuses outright, ask politely for the refusal in writing and forward that letter to your local ICB. r/ADHDUK quietly maintains a community list of surgeries that have refused, and you can usually switch to one nearby that already says yes without much fuss.</p></div>
+          <div className="card"><h4>Will my GP do this?</h4><p>Many GPs will consider it. Local arrangements vary. If your GP refuses outright, ask politely for the refusal in writing and forward that letter to your local ICB. r/ADHDUK maintains a community list of surgeries that have refused, and some people choose to register with a different practice. Policies vary, so ask before you move.</p></div>
           <div className="card"><h4>Is this only for England?</h4><p>For now, yes. Patient Choice / Right to Choose is an NHS England policy, so Scotland, Wales and Northern Ireland use different routes (the previous page covers each of them). If you live in England but happen to be registered with a GP elsewhere, it can sometimes still apply, so it is worth asking.</p></div>
-          <div className="card"><h4>What happens after the referral?</h4><p>Your chosen provider tends to write to you within four to six weeks for a short phone or video screening, and then books in your full assessment. Waits run somewhere between three and eight months in practice. Diagnosis and titration are free at that point, with prescriptions at the standard £9.90 per item or covered by a prepayment certificate.</p></div>
+          <div className="card"><h4>What happens after the referral?</h4><p>Your chosen provider tends to write to you within four to six weeks for a short phone or video screening, and then books in your full assessment. Waits run somewhere between three and eight months in practice. Diagnosis and titration are free at that point, with prescriptions at the standard NHS charge (free in Scotland, Wales and Northern Ireland), or covered by a prepayment certificate.</p></div>
           <div className="card"><h4>Does my data stay private?</h4><p>Yes, completely. Everything you type stays inside your own browser, and we do not store, send or even see any of it. If you refresh the page it is gone, so please save your letter somewhere safe before you close the tab.</p></div>
         </div>
       </div>
 
       <div className="disclaim" style={{marginTop:28}}>
-        <strong>One important thing.</strong> This letter is a starting point, not legal advice. Right to Choose policy can shift, and individual ICBs sometimes push back. If you hit a wall, ADHD UK has a free template-letter helpline and a list of currently-cooperating GP surgeries by region. We are not affiliated, they are just brilliant.
+        <strong>One important thing.</strong> This letter is a starting point, not legal advice. Right to Choose policy can shift, and individual ICBs sometimes push back. If you hit a wall, ADHD UK has a free template-letter helpline and a list of currently-cooperating GP surgeries by region. We are not affiliated with them.
       </div>
     </div>
   );
 }
 
 window.PB_PAGES_EXTRA_RTC_GEN = [
-  { ch: "test", title: "★ The Fast Track: GP letter generator", render: () => <PageRTCGenerator /> },
+  { ch: "test", title: "The Fast Track: GP letter generator", render: () => <PageRTCGenerator /> },
 ];

@@ -7,13 +7,48 @@ const CHAPTERS = [
   { id: "parents",  label: "For parents",        color: "#9FB89A" },
   { id: "test",     label: "Get tested",         color: "#8AB4C8" },
   { id: "tools",    label: "Daily tools",        color: "#E8B948" },
-  { id: "podcasts", label: "Podcasts",           color: "#1DB954" },
+  { id: "podcasts", label: "Podcasts",           color: "#4FA37E" },
   { id: "videos",   label: "Videos",             color: "#6B4D7A" },
-  { id: "meds",     label: "Medication",         color: "#FF5A36" },
-  { id: "work",     label: "Work & study",       color: "#8AB4C8" },
-  { id: "support",  label: "Get help now",       color: "#FF5A36" },
+  { id: "meds",     label: "Medication",         color: "#D9738F" },
+  { id: "work",     label: "Work & study",       color: "#3F5E8C" },
+  { id: "support",  label: "Get help now",       color: "#B5543C" },
   { id: "end",      label: "Close",              color: "#1A1814" },
 ];
+
+const PAGE_NOTES = {
+ "adhd-and-pregnancy.html": "This page provides general information and is not medical advice. Speak to a qualified clinician or prescriber about diagnosis, treatment or medication changes. Last checked September 2026.",
+ "diagnosed-over-60.html": "This page provides general information and is not medical advice. Speak to a qualified clinician or prescriber about diagnosis, treatment or medication changes. Last checked September 2026.",
+ "adhd-and-housing.html": "This page provides general information and is not legal advice. Housing law differs across the UK and changes often. Speak to Shelter, Citizens Advice or a housing adviser about your situation. Last checked September 2026.",
+ "fostering-adoption-and-kinship-care.html": "This page provides general information. Fostering, adoption and kinship rules differ across the UK. Speak to your agency, council, Kinship or Adoption UK about your situation. Last checked September 2026.",
+ "medication-options.html": "This page provides general information and is not medical advice. Speak to a qualified clinician or prescriber about diagnosis, treatment or medication changes. Last checked September 2026.",
+ "what-to-expect.html": "This page provides general information and is not medical advice. Speak to a qualified clinician or prescriber about diagnosis, treatment or medication changes. Last checked September 2026.",
+ "first-two-weeks-on-meds.html": "This page provides general information and is not medical advice. Speak to a qualified clinician or prescriber about diagnosis, treatment or medication changes. Last checked September 2026.",
+ "stimulants-and-your-body.html": "This page provides general information and is not medical advice. Speak to a qualified clinician or prescriber about diagnosis, treatment or medication changes. Last checked September 2026.",
+ "adhd-and-the-menstrual-cycle.html": "This page provides general information and is not medical advice. Speak to a qualified clinician or prescriber about diagnosis, treatment or medication changes. Last checked September 2026.",
+ "rsd.html": "This page provides general information and is not medical advice. Speak to a qualified clinician or prescriber about diagnosis, treatment or medication changes. Last checked September 2026.",
+ "co-occurring.html": "This page provides general information and is not medical advice. Speak to a qualified clinician or prescriber about diagnosis, treatment or medication changes. Last checked September 2026.",
+ "audhd-when-you-have-both.html": "This page provides general information and is not medical advice. Speak to a qualified clinician or prescriber about diagnosis, treatment or medication changes. Last checked September 2026.",
+ "adhd-and-addiction-what-helps.html": "This page provides general information and is not medical advice. Speak to a qualified clinician or prescriber about diagnosis, treatment or medication changes. Last checked September 2026.",
+ "getting-tested.html": "NHS services, provider availability, waiting times and local arrangements change. Check current information with your GP, the provider or GOV.UK. Last checked September 2026.",
+ "three-routes.html": "NHS services, provider availability, waiting times and local arrangements change. Check current information with your GP, the provider or GOV.UK. Last checked September 2026.",
+ "clinic-directory.html": "NHS services, provider availability, waiting times and local arrangements change. Check current information with your GP, the provider or GOV.UK. Last checked September 2026.",
+ "gp-script.html": "NHS services, provider availability, waiting times and local arrangements change. Check current information with your GP, the provider or GOV.UK. Last checked September 2026.",
+ "while-you-wait.html": "NHS services, provider availability, waiting times and local arrangements change. Check current information with your GP, the provider or GOV.UK. Last checked September 2026.",
+ "shared-care.html": "NHS services, provider availability, waiting times and local arrangements change. Check current information with your GP, the provider or GOV.UK. Last checked September 2026.",
+ "refusal-scripts.html": "NHS services, provider availability, waiting times and local arrangements change. Check current information with your GP, the provider or GOV.UK. Last checked September 2026.",
+ "the-fast-track-gp-letter-generator.html": "NHS services, provider availability, waiting times and local arrangements change. Check current information with your GP, the provider or GOV.UK. Last checked September 2026.",
+ "getting-assessed.html": "NHS services, provider availability, waiting times and local arrangements change. Check current information with your GP, the provider or GOV.UK. Last checked September 2026.",
+ "for-parents.html": "NHS services, provider availability, waiting times and local arrangements change. Check current information with your GP, the provider or GOV.UK. Last checked September 2026.",
+ "work-and-study.html": "This page provides general information, not legal advice. Rights depend on your circumstances. Check current guidance on GOV.UK or with ACAS. Last checked September 2026.",
+ "reasonable-adjustments.html": "This page provides general information, not legal advice. Rights depend on your circumstances. Check current guidance on GOV.UK or with ACAS. Last checked September 2026.",
+ "disclosure-email.html": "This page provides general information, not legal advice. Rights depend on your circumstances. Check current guidance on GOV.UK or with ACAS. Last checked September 2026.",
+ "driving-and-the-dvla.html": "This page provides general information, not legal advice. Rights depend on your circumstances. Check current guidance on GOV.UK or with ACAS. Last checked September 2026.",
+ "adhd-and-money-the-tax.html": "This page provides general information, not legal advice. Rights depend on your circumstances. Check current guidance on GOV.UK or with ACAS. Last checked September 2026.",
+ "adhd-and-money-the-longer-game.html": "This page provides general information, not legal advice. Rights depend on your circumstances. Check current guidance on GOV.UK or with ACAS. Last checked September 2026."
+};
+
+// Essay-style pages: one column of text, no photo
+const READING_PAGES = ["shame.html", "diagnostic-grief.html", "the-loneliness-of-an-adhd-adult.html", "sunday-night-dread.html", "if-you-already-feel-broken.html", "adhd-in-love.html", "rsd.html", "who-gets-missed.html"];
 
 function BrandMark() {
   return (
@@ -72,7 +107,9 @@ function App() {
     if (lastSupportIdx2 >= 0 && window.PB_PAGES_EXTRA_SUPPORT_LOVED) p7_9.splice(lastSupportIdx2 + 1, 0, ...window.PB_PAGES_EXTRA_SUPPORT_LOVED);
     // Practical + reference pages before end (still tagged 'support' for drawer grouping)
     const tail = [...(window.PB_PAGES_EXTRA_BEFORE_END || []), ...(window.PB_PAGES_EXTRA_PRACTICAL || []), ...(window.PB_PAGES_EXTRA_REFERENCE || []), ...(window.PB_PAGES_EXTRA_FEEDBACK || [])];
-    return [cover, ...p1_3, ...p4_6, ...p7_9, ...tail, end];
+    const all = [cover, ...p1_3, ...p4_6, ...p7_9, ...tail, end];
+    (window.PB_PAGES_NEW || []).forEach(n => { const at = all.findIndex(p => p.title === n.after); if (at >= 0) all.splice(at + 1, 0, n.page); });
+    return all;
   }, []);
 
   const total = PAGES.length;
@@ -120,7 +157,7 @@ function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [drawerQuery, setDrawerQuery] = useState("");
   const [tweaksOpen, setTweaksOpen] = useState(false);
-  const [theme, setTheme] = useState(localStorage.getItem("untangle-theme") || "warm");
+  const theme = "cool";
   const [textSize, setTextSize] = useState(localStorage.getItem("untangle-textsize") || "md");
   const [visited, setVisited] = useState(() => new Set(JSON.parse(localStorage.getItem("untangle-visited") || "[]")));
   const [saved, setSaved] = useState(() => new Set(JSON.parse(localStorage.getItem("untangle-saved") || "[]")));
@@ -133,8 +170,8 @@ function App() {
 
   // Theme application
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme === "warm" ? "" : theme);
-    localStorage.setItem("untangle-theme", theme);
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.removeItem("untangle-theme");
   }, [theme]);
 
   // Remember last position + mark visited + estimate read time; moving to another page loads its own file
@@ -272,6 +309,7 @@ function App() {
     document.querySelectorAll('.pb-page .chip').forEach(c => { const n = c.nextElementSibling; if (n && /^H[12]$/.test(n.tagName)) c.style.display = 'none'; });
     const want = `${idx + 1}. ${page.title.replace(/^[^A-Za-z0-9]+/, '')}`;
     if (el.textContent !== want) el.textContent = want;
+    el.classList.add('pb-title');
   }, [idx, textSize]);
   const chapter = CHAPTERS.find(c => c.id === page.ch) || CHAPTERS[0];
   const pct = ((idx + 1) / total) * 100;
@@ -304,13 +342,12 @@ function App() {
       <header className="pb-top">
         <div className="pb-top-row">
           <button className="pb-brand" onClick={() => go(0)} title="Back to cover" aria-label="Back to cover">
-            <BrandMark />
             <span>Untangle</span>
           </button>
           <div className="pb-chapter-label">
             <span className="pb-chapter-dot" style={{background: chapter.color}}></span>
             <span>{chapter.id === "intro" ? "Welcome" : chapter.id === "end" ? "End" : chapter.label}</span>
-            <span className="pb-readtime">~{readMins} min</span>
+            {readMins >= 5 && <span className="pb-readtime">~{readMins} min</span>}
           </div>
           <div className="pb-top-actions">
             {idx !== 0 && <button className={`pb-icon-btn ${saved.has(idx) ? "active" : ""}`} onClick={() => toggleSaved(idx)} title={saved.has(idx) ? "Remove bookmark" : "Save this page"} aria-label={saved.has(idx) ? "Remove bookmark for this page" : "Save this page"} aria-pressed={saved.has(idx)}>
@@ -318,9 +355,6 @@ function App() {
             </button>}
             <button className="pb-icon-btn pb-textsize-btn" onClick={() => setTextSize(s => s === "sm" ? "md" : s === "md" ? "lg" : "sm")} title="Increase or decrease text size" aria-label={`Text size: ${textSize === "sm" ? "small" : textSize === "lg" ? "large" : "default"}. Click to change.`}>
               <span aria-hidden="true">Aa</span>
-            </button>
-            <button className="pb-icon-btn" onClick={() => setTweaksOpen(o => !o)} title="Theme" aria-label="Open display settings" aria-expanded={tweaksOpen}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
             </button>
             <button className="pb-icon-btn" onClick={(e) => { lastFocusRef.current = e.currentTarget; setDrawerOpen(true); }} title="Contents" aria-label="Open contents" aria-expanded={drawerOpen}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -331,8 +365,9 @@ function App() {
       </header>
 
       <main className="pb-stage" id="pb-main" style={{zoom: textSizes.find(t => t.name === textSize).zoom}}>
-        <div key={idx} className={`pb-page ${direction === "back" ? "back" : ""} ${idx === 0 ? "pb-page-cover" : ""}`}>
+        <div key={idx} style={{"--ch": chapter.color}} className={`pb-page ${direction === "back" ? "back" : ""} ${idx === 0 ? "pb-page-cover" : ""} ${idx > 0 && PAGES[idx - 1] && PAGES[idx - 1].ch !== page.ch ? "pb-first" : ""} ${READING_PAGES.includes(SLUGS[idx]) ? "pb-reading" : ""}`}>
           {page.render(ctx)}
+          {PAGE_NOTES[SLUGS[idx]] && <p className="pb-page-note">{PAGE_NOTES[SLUGS[idx]]}</p>}
         </div>
       </main>
 
@@ -340,14 +375,14 @@ function App() {
         <div className="pb-bottom-row">
           {idx > 0 ? (
             <button className="pb-nav-btn pb-prev" onClick={() => go(idx - 1)}>
-              <span>←</span><span className="full-label">Previous</span>
+              <span className="full-label">Previous</span>
             </button>
           ) : <div></div>}
           <div className="pb-counter">
             <strong>{idx + 1}</strong> <span>/ {total}</span>
           </div>
           <button className="pb-nav-btn next pb-next" onClick={() => go(idx + 1)} disabled={idx === total - 1}>
-            <span className="full-label">{idx === 0 ? "Start" : idx === total - 2 ? "Finish" : "Next"}</span><span>→</span>
+            <span className="full-label">{idx === 0 ? "Start" : idx === total - 2 ? "Finish" : "Next"}</span>
           </button>
         </div>
         <p className="pb-credit">Made with love by <a href="https://richexperiments.com" target="_blank" rel="noopener"><strong>Rich Experiments</strong></a></p>
@@ -404,20 +439,6 @@ function App() {
           )}
         </div>
       </aside>
-
-      {/* Tweaks panel */}
-      <div className={`tweaks-overlay ${tweaksOpen ? "open" : ""}`} onClick={() => setTweaksOpen(false)}></div>
-      <div className={`tweaks ${tweaksOpen ? "open" : ""}`}>
-        <button className="tweaks-close" onClick={() => setTweaksOpen(false)} aria-label="Close">✕</button>
-        <h5>Colour theme</h5>
-        <div className="theme-grid">
-          {themes.map(t => (
-            <button key={t.name} className={`theme-btn ${theme === t.name ? "active" : ""}`} onClick={() => setTheme(t.name)}>
-              <span className="swatch" style={{background: t.swatch}}></span>{t.label}
-            </button>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }

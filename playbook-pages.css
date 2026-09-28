@@ -977,3 +977,4 @@ a.card:not([style*="background"]):hover h4 { color: var(--accent); }
   .meds-table td { font-size: 14px; line-height: 1.5; }
   .meds-table td[data-l]::before { content: attr(data-l); display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
 }
+.loophole-lede.loophole-note { font-size: 16px; margin-top: 12px; opacity: 0.92; }

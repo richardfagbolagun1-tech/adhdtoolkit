@@ -111,7 +111,8 @@ function PageRTCGenerator() {
         <h1 className="loophole-wordmark">
           <span className="loophole-line">The Fast Track</span>
         </h1>
-        <p className="loophole-lede">Most GPs won't tell you this exists. In England, you may be able to ask for referral to an NHS-contracted provider under Right to Choose. Eligibility, provider availability and waiting times vary. Below is the letter that makes it happen. Fill in seven boxes, hand it to your GP, get assessed for free.</p>
+        <p className="loophole-lede">Most GPs won't tell you this exists. In England, you may be able to ask for referral to an NHS-contracted provider under Right to Choose. Below is a letter to help you ask for a faster NHS-funded ADHD referral. Fill in seven boxes and hand it to your GP. If the referral goes ahead, the assessment is free.</p>
+        <p className="loophole-lede loophole-note">Eligibility and waiting times vary by area, and some ICBs (the NHS bodies that fund local services) have paused or capped Right to Choose referrals. Check your area on the ADHD UK website before you go.</p>
         <div className="loophole-stats">
           <div><span className="loophole-stat-n">2+ yrs</span><span className="loophole-stat-l">Typical NHS wait</span></div>
           <div><span className="loophole-stat-n">Varies</span><span className="loophole-stat-l">With the Fast Track</span></div>

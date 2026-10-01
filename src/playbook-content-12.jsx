@@ -8,7 +8,7 @@ function PageLoneliness() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--sky)", borderColor:"var(--sky)", color:"var(--ink)"}}>Chapter 1 · What it feels like</span>
-          <h2 style={{marginTop:16}}>When ADHD can feel lonely.</h2>
+          <h1 style={{marginTop:16}}>When ADHD can feel lonely.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">There is a kind of loneliness that comes with ADHD that other forms of loneliness don't quite touch. It is the feeling, sitting in a room full of friends, that no one in your life has the same operating system as you, and that the small daily friction of translating yourself into a neurotypical world has worn away your capacity for closeness.</p>
           <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"32px 0 16px"}}>The three loops that make it worse</h3>
@@ -42,7 +42,7 @@ function PageSunday() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--sky)", borderColor:"var(--sky)", color:"var(--ink)"}}>Chapter 1 · What it feels like</span>
-          <h2 style={{marginTop:16}}>Sunday-night dread, and why your week keeps starting late.</h2>
+          <h1 style={{marginTop:16}}>Sunday-night dread, and why your week keeps starting late.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">It is 9pm on Sunday. You have not done the laundry. You have not replied to the work email from Friday. The thought of Monday is sitting on your chest like a small heavy animal, and the closer it gets to bedtime the more you stay up doing nothing, because going to sleep means Monday arrives faster. By 1am you are exhausted and dreading the morning and ashamed of yourself, and the week has not even started. The staying-up part has a name: revenge bedtime procrastination.</p>
           <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"32px 0 16px"}}>What is happening</h3>

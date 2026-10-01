@@ -93,7 +93,7 @@ function PageChildBooks() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--sage)", borderColor:"var(--sage)", color:"var(--ink)"}}>Chapter 2 · For the child</span>
-          <h2 style={{marginTop:16}}>Books to give your child.</h2>
+          <h1 style={{marginTop:16}}>Books to give your child.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">A good book can help a child feel understood, with a main character who thinks and struggles the way they do.</p>
           <p style={{marginBottom:32, color:"var(--ink-2)", fontSize:16, lineHeight:1.6}}>You don't need to wait for a diagnosis to hand any of these over. Leave one on their bed, lend it from the library, read it together at night. We've grouped by age and added a short note about why each one matters, plus who it tends to land with. None of these are sponsored, and the list will keep growing.</p>

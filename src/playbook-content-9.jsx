@@ -8,7 +8,7 @@ function PageGrief() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--sky)", borderColor:"var(--sky)", color:"var(--ink)"}}>Chapter 1 · After recognition</span>
-          <h2 style={{marginTop:16}}>The grief no one warned you about.</h2>
+          <h1 style={{marginTop:16}}>The grief no one warned you about.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">Shame is one feeling. Grief is another. For some late-diagnosed adults, it appears after the initial relief of diagnosis. Some people feel they have been doing life on the hardest setting, without anyone noticing. Some people look back at friendships, jobs or years that might have gone differently. How this feels, and how long it lasts, is different for everyone. You do not have to work this out today.</p>
           <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"32px 0 16px"}}>Why grief shows up, and why it isn't shame</h3>
@@ -54,7 +54,7 @@ function PageGenderDiverse() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"#E8D6F5", borderColor:"#E8D6F5", color:"var(--ink)"}}>Chapter 1 · You are welcome here</span>
-          <h2 style={{marginTop:16}}>For trans, nonbinary &amp; gender-diverse readers.</h2>
+          <h1 style={{marginTop:16}}>For trans, nonbinary &amp; gender-diverse readers.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">Most ADHD writing talks only about men and women. For trans, nonbinary and gender-diverse adults, ADHD can be shaped by hormones, by masking, and by years of being seen as someone you are not. Healthcare can also make you choose which need to raise first.</p>
           <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"32px 0 16px"}}>What we know, and what we don't</h3>

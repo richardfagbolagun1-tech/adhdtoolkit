@@ -18,7 +18,7 @@ function PageMedsIntro() {
       <div className="ph">
         <div>
           <span className="chip accent">Chapter 7 · Medication</span>
-          <h2 style={{marginTop:16}}>Medication.</h2>
+          <h1 style={{marginTop:16}}>Medication.</h1>
           <p className="lede">Here are the main medicines UK specialists prescribe for adult ADHD, what each one is trying to do, and what the first few weeks can feel like. Medication is one option among several. Many people who try it find it helpful.</p>
         </div>
         <div className="ph-photo" style={{backgroundImage:`url('assets/page-56-meds-intro.webp')`}}></div>
@@ -33,7 +33,7 @@ function PageMedsTable() {
       <div className="ph ph-noline">
         <div>
           <span className="chip">Chapter 7 · The options</span>
-          <h2 style={{marginTop:16}}>UK ADHD medications.</h2>
+          <h1 style={{marginTop:16}}>UK ADHD medications.</h1>
           <p className="lede">Here are the main medicines UK specialists prescribe for adult ADHD, what each one is trying to do, and what the first few weeks can feel like. Medication is one option among several. Many people who try it find it helpful.</p>
           <p style={{fontSize:16, lineHeight:1.7, color:"var(--ink-2)", marginTop:16}}>Many people start on a stimulant and adjust from there. The table below covers the options a UK psychiatrist may discuss with you.</p>
         </div>
@@ -68,7 +68,7 @@ function PageMedsExpect() {
       <div className="ph ph-stack">
         <div>
           <span className="chip">Chapter 7 · What to expect</span>
-          <h2 style={{marginTop:16}}>The titration process.</h2>
+          <h1 style={{marginTop:16}}>The titration process.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">You start on a low dose, your psychiatrist adjusts every few weeks, and you keep going until you find the dose that fits you. This can take a few months, and it varies from person to person.</p>
             <PBSlider items={[
@@ -93,7 +93,7 @@ function PageWorkIntro() {
       <div className="ph">
         <div>
           <span className="chip" style={{background:"var(--sky)", borderColor:"var(--sky)", color:"var(--ink)"}}>Chapter 8 · Work & study</span>
-          <h2 style={{marginTop:16}}>Your rights at work and at <span className="accent">uni</span>.</h2>
+          <h1 style={{marginTop:16}}>Your rights at work and at <span className="accent">uni</span>.</h1>
           <p className="lede">ADHD may be protected under the Equality Act 2010 where it has a substantial and long-term effect on day-to-day life. If so, you may be able to ask for reasonable adjustments at work and at university. Many people never ask because they don't know what to ask for. Below is a list, and the words to use.</p>
         </div>
         <div className="ph-photo" style={{backgroundImage:`url('${"assets/work-cafe.webp"}')`}}></div>
@@ -119,7 +119,7 @@ function PageAccommodations() {
       <div className="ph ph-stack">
         <div>
           <span className="chip">Chapter 8 · Reasonable adjustments</span>
-          <h2 style={{marginTop:16}}>Things you can ask for.</h2>
+          <h1 style={{marginTop:16}}>Things you can ask for.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">ADHD may be protected under the Equality Act 2010 where it has a substantial and long-term effect on day-to-day life. If so, your employer must consider reasonable adjustments. What is reasonable depends on the role, workplace and circumstances. These are the ones that help, and how to ask for them.</p>
             <PBSlider items={items.map(it => ({h: it.h, p: it.b}))} />
@@ -137,7 +137,7 @@ function PageWorkScript() {
       <div className="ph ph-stack">
         <div>
           <span className="chip accent">Chapter 8 · Email script</span>
-          <h2 style={{marginTop:16}}>The disclosure email.</h2>
+          <h1 style={{marginTop:16}}>The disclosure email.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">To your manager or HR. A template you can adapt to your role. Keep it direct and professional, with no need to apologise.</p>
           <div className="script-card">
@@ -161,7 +161,7 @@ function PageSupportIntro() {
       <div className="ph ph-noline">
         <div>
           <span className="chip accent">Chapter 9 · Support now</span>
-          <h2 style={{marginTop:16}}>If today is hard.</h2>
+          <h1 style={{marginTop:16}}>If today is hard.</h1>
           <p className="lede">If today is heavy, you do not need a piece of paper to ask for help. These UK numbers and organisations are free and confidential. You can ask for help even if you are not sure what you need yet.</p>
         </div>
         <div className="ph-photo" style={{backgroundImage:`url('assets/page-65-support-intro.webp')`}}></div>
@@ -176,7 +176,7 @@ function PageHelplines() {
       <div className="ph ph-stack">
         <div>
           <span className="chip accent">Chapter 9 · Crisis lines</span>
-          <h2 style={{marginTop:16}}>If you need to talk right now.</h2>
+          <h1 style={{marginTop:16}}>If you need to talk right now.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">If you're in crisis, or close to it, please use one of the numbers on this page first. They are free, confidential and answered by trained people.</p>
           <div className="help-list help-compact">
@@ -235,7 +235,7 @@ function PageCharities() {
       <div className="ph">
         <div>
           <span className="chip">Chapter 9 · UK charities</span>
-          <h2 style={{marginTop:16}}>Trusted UK support.</h2>
+          <h1 style={{marginTop:16}}>Trusted UK support.</h1>
           <p className="lede">UK organisations that offer free support and advice. Bookmark this page.</p>
         </div>
         <div className="ph-photo" style={{backgroundImage:`url('${"assets/charities-noticeboard.webp"}')`}}></div>
@@ -258,7 +258,7 @@ function PageCharities() {
 
 const { useState: useS3, useEffect: useE3 } = React;
 // Each slide has a -wide (landscape screens) and -tall (portrait screens) WebP.
-const COVER_SLIDES = ["assets/cover-1", "assets/cover-2", "assets/cover-3"];
+const COVER_SLIDES = ["assets/hero-1", "assets/hero-2", "assets/hero-bench", "assets/hero-4", "assets/hero-5", "assets/hero-6"];
 const COVER_TALL = !!(window.matchMedia && window.matchMedia("(orientation: portrait)").matches);
 
 function PageCover({onStart, total, resumeIdx, resumeTitle}) {
@@ -296,7 +296,7 @@ function PageCover({onStart, total, resumeIdx, resumeTitle}) {
       <ul className="cover-hero-facts">
         <li>ADHD UK estimates around 2.6 million people in the UK have ADHD.</li>
         <li>NHS waits for an adult assessment are commonly two years or more, and far longer in some areas.</li>
-        <li>Despite public debate about over-diagnosis, ADHD UK estimates more than 2 million of them are undiagnosed. What's changed is awareness, not the condition.</li>
+        <li>Despite public debate about over-diagnosis, ADHD UK estimates more than 2 million people are undiagnosed. What's changed is awareness, not the condition.</li>
       </ul>
     </div>
   );
@@ -306,7 +306,7 @@ function PageEnd({onRestart, onJump}) {
   return (
     <div className="end-card">
       <span className="chip accent" style={{marginBottom:16}}>You made it</span>
-      <h2>That's the playbook.</h2>
+      <h1>That's the playbook.</h1>
       <p>You now know more about UK ADHD than most GPs. The next move is small. Pick one thing, this week. Book a GP appointment, try one framework, send the disclosure email. One step.</p>
       <div className="actions">
         <button className="btn btn-accent" onClick={() => onJump("test")}>Find a clinic</button>
@@ -314,28 +314,7 @@ function PageEnd({onRestart, onJump}) {
         <button className="btn btn-ghost" style={{border:"1px solid var(--line)"}} onClick={() => window.dispatchEvent(new CustomEvent("pb-jump-feedback"))}>★ Send feedback</button>
         <button className="btn btn-ghost" style={{border:"1px solid var(--line)"}} onClick={onRestart}>Start again</button>
       </div>
-      <div className="signup-card">
-        <div className="signup-inner">
-          <h3 style={{marginTop:0}}>New chapters, new tools, no spam.</h3>
-          <p>One short email a month with the latest UK ADHD updates, new chapters we've added, and reader-suggested resources. Unsubscribe in one click.</p>
-          {/* Brevo subscription form — posts directly to Brevo. The hidden fields
-              email_address_check (honeypot) and locale are required by Brevo. */}
-          <form
-            id="brevo-signup"
-            action="https://16b6a1b0.sibforms.com/serve/MUIFAAbJPQXH9DK7mYVKRAfqfj-dOwEHvH1JsSBS1BF0SSQDUKAEWZKchYJU_IgigGsLj89BKdWNQIBXRQz7ptyWYolP0UuOxMcj_gDTYF-G-0uZNC_42yIoLpOsZEljk3h6wiKGTsoT2ho6qiEaH_7gR9O3_ZH7h2kXTvs8W-qzjhgQpNpldfLeRv4xHFvfA_H2MTQATuB3AnDj0Q=="
-            method="POST"
-            target="_blank"
-            rel="noopener"
-            className="signup-form"
-          >
-            <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address" />
-            <input type="text" name="email_address_check" defaultValue="" style={{display:"none"}} tabIndex="-1" autoComplete="off" aria-hidden="true" />
-            <input type="hidden" name="locale" value="en" />
-            <button type="submit" className="btn btn-primary">Subscribe</button>
-          </form>
-          <p className="signup-small">By subscribing you agree to receive emails from us. Powered by Brevo. We never sell your data.</p>
-        </div>
-      </div>
+      <PBSignup />
     </div>
   );
 }
@@ -355,3 +334,31 @@ window.PB_PAGES_7_9 = [
 
 window.PB_COVER = PageCover;
 window.PB_END = PageEnd;
+
+function PBSignup() {
+  return (
+    <div className="signup-card">
+      <div className="signup-inner">
+        <h3 style={{marginTop:0}}>New chapters, new tools, no spam.</h3>
+        <p>One short email a month with the latest UK ADHD updates, new chapters we've added, and reader-suggested resources. Unsubscribe in one click.</p>
+        {/* Brevo subscription form — posts directly to Brevo. The hidden fields
+            email_address_check (honeypot) and locale are required by Brevo. */}
+        <form
+          id="brevo-signup"
+          action="https://16b6a1b0.sibforms.com/serve/MUIFAAbJPQXH9DK7mYVKRAfqfj-dOwEHvH1JsSBS1BF0SSQDUKAEWZKchYJU_IgigGsLj89BKdWNQIBXRQz7ptyWYolP0UuOxMcj_gDTYF-G-0uZNC_42yIoLpOsZEljk3h6wiKGTsoT2ho6qiEaH_7gR9O3_ZH7h2kXTvs8W-qzjhgQpNpldfLeRv4xHFvfA_H2MTQATuB3AnDj0Q=="
+          method="POST"
+          target="_blank"
+          rel="noopener"
+          className="signup-form"
+        >
+          <input type="email" name="EMAIL" placeholder="your@email.com" required aria-label="Email address" />
+          <input type="text" name="email_address_check" defaultValue="" style={{display:"none"}} tabIndex="-1" autoComplete="off" aria-hidden="true" />
+          <input type="hidden" name="locale" value="en" />
+          <button type="submit" className="btn btn-primary">Subscribe</button>
+        </form>
+        <p className="signup-small">By subscribing you agree to receive emails from us. Powered by Brevo. We never sell your data.</p>
+      </div>
+    </div>
+  );
+}
+window.PBSignup = PBSignup;

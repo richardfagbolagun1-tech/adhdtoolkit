@@ -8,10 +8,10 @@ function PageAuDHD() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--sky)", borderColor:"var(--sky)", color:"var(--ink)"}}>Chapter 1 · You may be both</span>
-          <h2 style={{marginTop:16}}>AuDHD, when ADHD and autism live in the same brain.</h2>
+          <h1 style={{marginTop:16}}>AuDHD, when ADHD and autism live in the same brain.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">Many adults with ADHD are also autistic. Estimates vary between studies, but the overlap is common enough that people call it AuDHD. It is not a separate diagnosis. It means having both, which can be tiring, for example needing routine while also craving new things.</p>
-          <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"32px 0 16px"}}>The two wirings, briefly</h3>
+          <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"32px 0 16px"}}>What is the difference between ADHD and autism?</h3>
           <p style={{fontSize:16, lineHeight:1.7, color:"var(--ink-2)"}}>ADHD is, roughly, a difference in the brain's attention regulation and dopamine systems. Autism is, roughly, a difference in sensory processing, social processing, and cognitive flexibility. They are not the same thing and they are not on a spectrum together. They are two different neurotypes that happen to co-occur far more often than chance, which is why so many late-diagnosed ADHDers eventually wonder if they are autistic too, and why so many late-diagnosed autistic adults eventually wonder if they have ADHD as well.</p>
           </div>
         </div>
@@ -19,7 +19,7 @@ function PageAuDHD() {
       </div>
 
 
-      <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"40px 0 16px"}}>The signs you might be both</h3>
+      <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"40px 0 16px"}}>What are the signs of ADHD and autism together?</h3>
 
       <PBSlider items={[
         {h:"You need routine and you can't keep one.", p:"Autism likes things to be predictable, and ADHD makes that hard. Many AuDHD adults build detailed routines, drop them after two weeks, panic, and then build new ones. The two conditions pull in different directions."},
@@ -30,7 +30,7 @@ function PageAuDHD() {
         {h:"Your social energy runs out quickly.", p:"Adults with ADHD often enjoy socialising and crash later. Autistic adults often find it hard work from the start. AuDHD adults may want to go out, enjoy it, and then need two days to recover."},
       ]} />
 
-      <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"8px 0 16px"}}>Getting assessed for both</h3>
+      <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"8px 0 16px"}}>Can I be assessed for ADHD and autism at the same time?</h3>
       <p style={{fontSize:16, lineHeight:1.7, color:"var(--ink-2)"}}>The NHS routes for ADHD and autism are separate, with separate waiting lists and separate Right to Choose providers. You can be on both lists at the same time and most AuDHD adults are. If you go private, the same provider can sometimes assess both, but more often you will use one provider for ADHD and another for autism. Many people start with whichever is affecting them most right now, since there is no medical reason to do them in a set order.</p>
 
       <div className="card" style={{marginTop:24, padding:"24px 28px", background:"var(--bg-2)"}}>
@@ -58,7 +58,7 @@ function PageWhoGetsMissed() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"#E8D6F5", borderColor:"#E8D6F5", color:"var(--ink)"}}>Chapter 1 · The diagnostic gap</span>
-          <h2 style={{marginTop:16}}>Who the system misses, and what to do if that is you.</h2>
+          <h1 style={{marginTop:16}}>Who the system misses, and what to do if that is you.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">ADHD is not diagnosed evenly across groups. Research suggests some groups, including people from minority ethnic backgrounds, are less likely to be diagnosed, and more likely to be told it is something else. What we know about the gap is below.</p>
           <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"32px 0 16px"}}>What the data shows</h3>

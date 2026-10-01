@@ -7,7 +7,7 @@ function PBAccordion({ items }) {
       {items.map((it, i) => (
         <div key={i} className={`card pbn-acc-row ${open === i ? "open" : ""}`} onClick={() => setOpen(open === i ? null : i)}>
           <div className="pbn-acc-head"><h4><span className="pbn-slide-count">{i + 1}/{items.length}</span> {it.h}</h4><span className="pbn-chev">{open === i ? "\u2212" : "+"}</span></div>
-          {open === i && <p className="pbn-acc-body">{it.p}</p>}
+          <p className={`pbn-acc-body${open === i ? "" : " pbn-hide"}`}>{it.p}</p>
         </div>
       ))}
     </div>
@@ -19,8 +19,12 @@ function PBSlider({ items }) {
   const it = items[i];
   return (
     <div className="card pbn-slider">
-      <h4 className="pbn-slide-h"><span className="pbn-slide-count">{i + 1}/{items.length}</span> {it.h}</h4>
-      <p>{it.p}</p>
+      {items.map((x, k) => (
+        <div key={k} className={k === i ? "" : "pbn-hide"}>
+          <h4 className="pbn-slide-h"><span className="pbn-slide-count">{k + 1}/{items.length}</span> {x.h}</h4>
+          <p>{x.p}</p>
+        </div>
+      ))}
       <div className="pbn-slide-nav">
         <button onClick={() => setI((i - 1 + items.length) % items.length)} aria-label="Previous slide">Previous</button>
         <button onClick={() => setI((i + 1) % items.length)} aria-label="Next slide">Next</button>
@@ -38,7 +42,7 @@ function PBTabs({ items }) {
           <button key={idx} className={`pbn-tab ${idx === i ? "active" : ""}`} onClick={() => setI(idx)}>{idx + 1}</button>
         ))}
       </div>
-      <div className="card pbn-tab-panel"><h4><span className="pbn-slide-count">{i + 1}/{items.length}</span> {items[i].h}</h4><p>{items[i].p}</p></div>
+      {items.map((x, k) => <div key={k} className={`card pbn-tab-panel${k === i ? "" : " pbn-hide"}`}><h4><span className="pbn-slide-count">{k + 1}/{items.length}</span> {x.h}</h4><p>{x.p}</p></div>)}
     </div>
   );
 }
@@ -54,7 +58,7 @@ function PBTruncated({ items }) {
         return (
           <div key={i} className="card">
             <h4><span className="pbn-slide-count">{i + 1}/{items.length}</span> {it.h}</h4>
-            <p>{open ? it.p : short}</p>
+            <p>{long ? <>{it.p.slice(0, 90)}<span className={open ? "" : "pbn-hide"}>{it.p.slice(90)}</span>{!open && "\u2026"}</> : it.p}</p>
             {long && <button className="pbn-readmore" onClick={() => setOpenSet(s => ({ ...s, [i]: !s[i] }))}>{open ? "Show less" : "Read more"}</button>}
           </div>
         );
@@ -77,11 +81,15 @@ function PBSlideAccordion({ items }) {
           <button onClick={() => go(1)} aria-label="Next slide">Next</button>
         </div>
       </div>
-      <button className="pbn-sacc-h" onClick={() => setOpen(o => !o)} aria-expanded={open}>
-        <span><span className="pbn-slide-count">{i + 1}/{items.length}</span> {it.h}</span>
-        <span className="pbn-chev">{open ? "−" : "+"}</span>
-      </button>
-      {open && <p className="pbn-sacc-body">{it.p}</p>}
+      {items.map((x, k) => (
+        <div key={k} className={k === i ? "" : "pbn-hide"}>
+          <button className="pbn-sacc-h" onClick={() => setOpen(o => !o)} aria-expanded={k === i && open}>
+            <span><span className="pbn-slide-count">{k + 1}/{items.length}</span> {x.h}</span>
+            <span className="pbn-chev">{k === i && open ? "−" : "+"}</span>
+          </button>
+          <p className={`pbn-sacc-body${k === i && open ? "" : " pbn-hide"}`}>{x.p}</p>
+        </div>
+      ))}
     </div>
   );
 }

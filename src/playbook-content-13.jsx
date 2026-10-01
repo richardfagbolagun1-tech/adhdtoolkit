@@ -8,7 +8,7 @@ function PageWhatIsADHD() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--peach)", borderColor:"var(--peach)", color:"var(--ink)"}}>Chapter 1 · Start here</span>
-          <h2 style={{marginTop:16}}>So, what is ADHD?</h2>
+          <h1 style={{marginTop:16}}>So, what is ADHD?</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
             <p className="lede">ADHD is a difference in how the brain manages attention, motivation and time. It is not a lack of effort or intelligence. This page covers what is happening in the brain, what it feels like day to day, and why it is so often missed. You do not need to read it all at once.</p>
             <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:22, margin:"20px 0 8px"}}>The short version</h3>
@@ -64,7 +64,7 @@ function PageForLovedOnes() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"#E8D6F5", borderColor:"#E8D6F5", color:"var(--ink)"}}>Chapter 9 · For everyone else</span>
-          <h2 style={{marginTop:16}}>For the person reading this who doesn't have ADHD.</h2>
+          <h1 style={{marginTop:16}}>For the person reading this who doesn't have ADHD.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">If you have arrived here because someone you love handed you this playbook, or because someone close to you has just been diagnosed, start here. It is short. It is fine to find this hard.</p>
           <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"32px 0 16px"}}>The things that will help you most to know</h3>

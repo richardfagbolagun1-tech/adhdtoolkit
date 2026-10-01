@@ -8,7 +8,7 @@ function PageUnfinished() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--peach)", borderColor:"var(--peach)", color:"var(--ink)"}}>Chapter 4 · Tools</span>
-          <h2 style={{marginTop:16}}>The pile of unfinished things.</h2>
+          <h1 style={{marginTop:16}}>The pile of unfinished things.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">Many adults with ADHD have one. The half-painted room, the course you stopped at module four, the friendship you haven't replied to since March, the book on chapter seven, the box from the move. It comes from a brain that finds starting easier than finishing, and there are ways to clear it.</p>
           <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"32px 0 16px"}}>Why the pile exists</h3>
@@ -53,7 +53,7 @@ function PageDinner() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--peach)", borderColor:"var(--peach)", color:"var(--ink)"}}>Chapter 4 · Tools</span>
-          <h2 style={{marginTop:16}}>The 6pm decision-fatigue dinner problem.</h2>
+          <h1 style={{marginTop:16}}>The 6pm decision-fatigue dinner problem.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">It is six in the evening. You are hungry. You have spent all day making decisions, and the part of your brain that decides things has gone offline. You stand in the kitchen, open the fridge, close the fridge, open it again. Twenty minutes later you order a takeaway you cannot afford and feel guilty about for the rest of the evening. This is decision fatigue, and you can plan around it.</p>
           <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"32px 0 16px"}}>Why dinner is uniquely hard</h3>

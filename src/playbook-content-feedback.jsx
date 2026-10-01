@@ -114,7 +114,7 @@ function PageFeedback() {
     return (
       <div>
         <span className="chip accent">Feedback · Thank you</span>
-        <h2 style={{marginTop:16}}>Thank you, properly.</h2>
+        <h1 style={{marginTop:16}}>Thank you, properly.</h1>
         <p className="lede" style={{marginTop:16}}>It goes to our inbox and we read every message. We can't always reply, but every note feeds into the monthly update. If you left an email and your suggestion makes it in, we will let you know when it goes live.</p>
         <div style={{display:"flex", gap:12, marginTop:24, flexWrap:"wrap"}}>
           <button className="btn btn-ghost" style={{border:"1px solid var(--line)"}} onClick={() => setSent(false)}>Send another</button>
@@ -128,7 +128,7 @@ function PageFeedback() {
       <div className="ph">
         <div>
           <span className="chip accent">Feedback · We read every word</span>
-          <h2 style={{marginTop:16}}>Help us make this better, every month.</h2>
+          <h1 style={{marginTop:16}}>Help us make this better, every month.</h1>
           <p className="lede">This playbook gets a monthly update. Pages get rewritten, broken links fixed, new chapters added, and outdated NHS information replaced as fast as we hear about it. UK ADHD policy changes often, and most of our updates come from readers. If something is wrong, missing or out of date, please tell us.</p>
         </div>
         <div className="ph-photo" style={{backgroundImage:`url('assets/feedback-writing.webp')`}}></div>
@@ -371,7 +371,7 @@ const SOURCES_LIST = [
 function PageSources() {
   return (
     <div>
-      <h2 style={{marginBottom:16}}>Sources</h2>
+      <h1 style={{marginBottom:16}}>Sources</h1>
       <p className="lede">These are the main sources behind the facts and figures in this playbook. We link to the original wherever we can. Information about NHS services, benefits and rights changes, so check the source before you make a decision.</p>
       <p style={{fontSize:14, color:"var(--muted)", marginTop:8}}>Last checked 25 September 2026.</p>
       <ul className="src-list">

@@ -87,7 +87,7 @@ function PageToolsIntro() {
       <div className="ph">
         <div>
           <span className="chip" style={{background:"var(--mustard)", borderColor:"var(--mustard)", color:"var(--ink)"}}>Chapter 4 · Daily tools</span>
-          <h2 style={{marginTop:16}}>Six tools that <span className="accent">actually</span><br/>work for ADHD brains.</h2>
+          <h1 style={{marginTop:16}}>Six tools that <span className="accent">actually</span><br/>work for ADHD brains.</h1>
           <p className="lede">Six small methods that people with ADHD recommend to each other. Each has its own page. Pick the one that sounds easiest and try it for a week. You do not need a diagnosis to try any of them. Take what helps and leave the rest.</p>
         </div>
         <div className="ph-photo" style={{backgroundImage:`url('assets/page-40-tools.webp')`}}></div>
@@ -101,7 +101,7 @@ function PageFramework({fw}) {
     <div>
       <div className="ph ph-stack fw-page">
         <div>
-          <h2 style={{marginTop:0}}>{fw.name}</h2>
+          <h1 style={{marginTop:0}}>{fw.name}</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
             <div className="meta" style={{display:"flex", gap:10, flexWrap:"wrap", marginBottom:16}}>
               <span className="chip fw-chip">Framework {fw.num}</span>
@@ -140,7 +140,7 @@ function PagePodcastsIntro() {
       <div className="ph">
         <div>
           <span className="chip" style={{background:"var(--spotify)", borderColor:"var(--spotify)", color:"#000"}}>Chapter 5 · Podcasts</span>
-          <h2 style={{marginTop:16}}>Twelve podcasts worth<br/>your <span className="accent">commute</span>.</h2>
+          <h1 style={{marginTop:16}}>Twelve podcasts worth<br/>your <span className="accent">commute</span>.</h1>
           <p className="lede">Twelve we keep coming back to, gathered from listeners and creators across the UK and the US. No affiliates or sponsors. Tap any cover to open it in Spotify.</p>
         </div>
         <div className="ph-photo" style={{backgroundImage:`url('${"assets/podcasts-earbuds.webp"}')`}}></div>
@@ -154,7 +154,7 @@ function PagePodcasts({slice, intro}) {
   return (
     <div>
       <span className="chip">Chapter 5 · Picks {slice[0]+1}-{slice[1]}</span>
-      <h2 style={{marginTop:16, marginBottom: 10}}>Curated on Spotify.</h2>
+      <h1 style={{marginTop:16, marginBottom: 10}}>Curated on Spotify.</h1>
       {intro && <p className="lede" style={{marginBottom:12}}>Twelve we keep coming back to, gathered from listeners and creators across the UK and the US. No affiliates or sponsors. Tap any cover to open it in Spotify.</p>}
       <p style={{fontSize:14, color:"var(--muted)", marginBottom:24}}>Each cover opens the show in Spotify. Real cover artwork sits inside Spotify itself, the swatches below are our visual shorthand so this page works even when an image host is blocked.</p>
       <div className="pod-grid">
@@ -200,7 +200,7 @@ function PageVideosIntro() {
       <div className="ph ph-noline">
         <div>
           <span className="chip" style={{background:"var(--plum)", borderColor:"var(--plum)", color:"#fff"}}>Chapter 6 · Videos</span>
-          <h2 style={{marginTop:16}}>Nine short videos<br/>worth <span className="accent">watching</span>.</h2>
+          <h1 style={{marginTop:16}}>Nine short videos<br/>worth <span className="accent">watching</span>.</h1>
           <p className="lede">Short videos for when reading isn't working: explainers from clinicians, lived-experience stories and a few practical how-tos. None are longer than sixteen minutes.</p>
         </div>
         <div className="ph-photo" style={{backgroundImage:`url('assets/video-sofa.webp')`}}></div>
@@ -216,7 +216,7 @@ function PageVideos() {
       <div className="ph ph-stack">
         <div>
           <span className="chip">Chapter 6 · Library</span>
-          <h2 style={{marginTop:16, marginBottom:10}}>The video library.</h2>
+          <h1 style={{marginTop:16, marginBottom:10}}>The video library.</h1>
           <p className="lede">Short videos for when reading isn't working: explainers from clinicians, lived-experience stories and a few practical how-tos. None are longer than sixteen minutes.</p>
           <p style={{color:"var(--ink-2)", fontSize:16, lineHeight:1.55, marginTop:16, marginBottom:0}}>One talk plays on this page. The others open a YouTube search for the title, so the links keep working if a video moves.</p>
         </div>

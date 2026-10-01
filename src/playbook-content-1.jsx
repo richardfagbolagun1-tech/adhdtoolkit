@@ -32,7 +32,7 @@ function PageSignsIntro() {
       <div className="ph ph-stack">
         <div>
           <span className="chip accent">Chapter 1 · Self</span>
-          <h2 style={{marginTop:16}}>Could I actually<br/>have <span className="accent">ADHD?</span></h2>
+          <h1 style={{marginTop:16}}>Could I actually<br/>have <span className="accent">ADHD?</span></h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">Take six minutes to walk through the World Health Organisation's Adult ADHD Self-Report Scale, a screening tool widely used in UK assessments. It can't diagnose you. It can tell you whether it's worth talking to your GP.</p>
           <div className="intro-block">
@@ -53,7 +53,7 @@ function PageSigns() {
       <div className="ph ph-stack">
         <div>
           <span className="chip">Chapter 1 · Nine signs</span>
-          <h2 style={{marginTop:16, marginBottom: 16}}>Nine signs in adults.</h2>
+          <h1 style={{marginTop:16, marginBottom: 16}}>Nine signs in adults.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede" style={{fontSize: 17, color:"var(--ink-2)", margin:0}}>These are written by adults who have ADHD, for adults who think they might. Recognising some of these does not mean you have ADHD. It may be worth talking to a clinician if several fit and have affected you for a long time. You don't have to relate to every one, especially if you're a woman, where ADHD often shows up quieter and more internal. If this fits your experience, keep reading. If it does not, skip it.</p>
           <PBSlider items={SIGNS.map(s => ({h: s.t, p: s.b}))} />
@@ -97,7 +97,7 @@ function PageSelfCheck() {
     return (
       <div>
         <span className="chip accent">Your result</span>
-        <h2 style={{marginTop:16}}>{title}</h2>
+        <h1 style={{marginTop:16}}>{title}</h1>
         <div className="check-card" style={{marginTop:24}}>
           <div className="result-bar"><div className="dot" style={{left:`${Math.max(4,Math.min(96,pct))}%`}}></div></div>
           <div className="result-scale"><span>0 / Low</span><span>4 / Threshold</span><span>6 / Strong</span></div>
@@ -117,7 +117,7 @@ function PageSelfCheck() {
       <div className="ph ph-stack">
         <div>
           <span className="chip accent">ASRS-v1.1 · Part A</span>
-          <h2 style={{marginTop:16, marginBottom: 8}}>The screener.</h2>
+          <h1 style={{marginTop:16, marginBottom: 8}}>The screener.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p style={{fontSize:16, color:"var(--ink-2)", margin: 0,}}>Six short questions from the WHO Adult ADHD Self-Report Scale. How often has each thing happened in the last 6 months?</p>
       <div className="check-card" style={{marginTop:20}}>
@@ -154,7 +154,7 @@ function PageSelfNext() {
       <div className="ph ph-stack">
         <div>
           <span className="chip">Chapter 1 · Next steps</span>
-          <h2 style={{marginTop:16, marginBottom: 12}}>If you scored high, these are your next steps.</h2>
+          <h1 style={{marginTop:16, marginBottom: 12}}>If you scored high, these are your next steps.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede" style={{margin:0}}>Three things you can do next. None of them need a diagnosis.</p>
             <PBSlider items={[
@@ -181,7 +181,7 @@ function PageParentsIntro() {
       <div className="ph ph-noline">
         <div>
           <span className="chip" style={{background:"var(--sage)", borderColor:"var(--sage)", color:"var(--ink)"}}>Chapter 2 · Parents</span>
-          <h2 style={{marginTop:16}}>Is my child<br/>showing <span className="accent">signs?</span></h2>
+          <h1 style={{marginTop:16}}>Is my child<br/>showing <span className="accent">signs?</span></h1>
           <p className="lede">Written for the parent who has spent months wondering, this covers what to look for at each age, what to say to your GP, and how to talk to your child without making them feel something is wrong with them.</p>
         </div>
         <div className="ph-photo" style={{backgroundImage:`url('assets/page-25-parents-intro.webp')`}}></div>
@@ -197,7 +197,7 @@ function PageParentsRead() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--sage)", borderColor:"var(--sage)", color:"var(--ink)"}}>Chapter 2 · Read this first</span>
-          <h2 style={{marginTop:16}}>Three things to know before you start.</h2>
+          <h1 style={{marginTop:16}}>Three things to know before you start.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">Before any reading, any forms, any appointments, three things parents of newly diagnosed children say they wish they had heard in the first week.</p>
             <PBSlider items={[
@@ -264,7 +264,7 @@ function PageParentChecklist() {
   return (
     <div>
       <span className="chip">Chapter 2 · Checklist</span>
-      <h2 style={{marginTop:16, marginBottom:8}}>The parent's checklist.</h2>
+      <h1 style={{marginTop:16, marginBottom:8}}>The parent's checklist.</h1>
       <p style={{fontSize:16, color:"var(--ink-2)", marginBottom: 20,}}>Tick what you've seen consistently for at least 6 months, in more than one setting (home and school). Many of these behaviours are common in childhood. What matters is a persistent pattern, across settings, that is causing distress or difficulty.</p>
       <div className="cl-tabs">
         {[{k:"young",l:"Ages 4-10"},{k:"school",l:"School age"},{k:"teen",l:"Teens 12-18"}].map(t => (
@@ -296,7 +296,7 @@ function PageParentTalking() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--sage)", borderColor:"var(--sage)", color:"var(--ink)"}}>Chapter 2 · Talking</span>
-          <h2 style={{marginTop:16}}>Talking to them about it.</h2>
+          <h1 style={{marginTop:16}}>Talking to them about it.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">Children pick up on shame fast, and how you frame this matters more than the exact words. Start from curiosity rather than worry.</p>
       <div className="dd-pair" style={{marginTop:20}}>
@@ -333,11 +333,11 @@ function PageParentRoute() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--sage)", borderColor:"var(--sage)", color:"var(--ink)"}}>Chapter 2 · The UK route</span>
-          <h2 style={{marginTop:16}}>Getting assessed, step by step.</h2>
+          <h1 style={{marginTop:16}}>Getting assessed, step by step.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">The UK pathway to a child ADHD assessment. Four steps, what each looks like, and roughly how long it takes.</p>
             <PBSlider items={[
-            {h:"Book the GP", p:"Ask for a double slot so you have time to be heard properly. Request a referral to community paediatrics (for under-18s) or to a Right to Choose clinic, the choice is yours."},
+            {h:"Book the GP", p:"Ask for a double slot so you have time to be heard properly. Request a referral to community paediatrics (for under-18s) or, in England, to a Right to Choose clinic. The choice is yours."},
             {h:"Gather evidence", p:"Pull together school reports, examples of behaviour you've noticed, and ask if the school can complete a Conners or SDQ questionnaire. The more concrete the picture, the smoother the next step."},
             {h:"Assessment", p:"Expect anywhere from three to eighteen months on the NHS. A specialist, such as a paediatrician or child psychiatrist, will usually gather information from you, your child and the school."},
             {h:"Plan & support", p:"A diagnosis can lead to school support (EHCP, exam access), parent training programmes, and the option of medication trials from around age six. None of it is automatic, but all of it is there."},
@@ -379,9 +379,9 @@ function PageTestedIntro() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--sky)", borderColor:"var(--sky)", color:"var(--ink)"}}>Chapter 3 , Get tested</span>
-          <h2 style={{marginTop:16}}>Three routes<br/>to <span className="accent">assessment.</span></h2>
+          <h1 style={{marginTop:16}}>Three routes<br/>to <span className="accent">assessment.</span></h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
-          <p className="lede">There are three real routes to an adult ADHD assessment in the UK, and one of them, Right to Choose, is often not well known. Right to Choose may offer a faster NHS-funded assessment route in England, though availability and waits vary. This chapter shows you how to use it.</p>
+          <p className="lede">There are three real routes to an adult ADHD assessment in England, and one of them, Right to Choose, is often not well known. Right to Choose is England only. It needs a GP referral and is NHS-funded, so it's free to you. In Scotland, Wales or Northern Ireland, see the pages for your nation. Right to Choose may offer a faster NHS-funded assessment route in England, though availability and waits vary. This chapter shows you how to use it.</p>
           <div className="intro-block">
             <p><strong>What this chapter covers.</strong> The UK has three real routes to an adult ADHD assessment, and they could not be more different. NHS is free but the wait is commonly two years or more and some trusts have closed their lists entirely. Right to Choose is also free, works only in England, and brings the wait down to three to six months, almost no GP volunteers this information. Private assessment can be quicker, but costs, waiting times and follow-up arrangements vary. Check these before you decide.</p>
             <p>Over the next pages we lay all three side by side, list UK clinics you can filter by region, route and age, and give you a GP script you can read out or paste into an online form.</p>
@@ -401,7 +401,7 @@ function PageRoutes() {
       <div className="ph ph-stack">
         <div>
           <span className="chip">Chapter 3 · Compare</span>
-          <h2 style={{marginTop:16, marginBottom: 12}}>Three routes, side by side.</h2>
+          <h1 style={{marginTop:16, marginBottom: 12}}>Three routes, side by side.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede" style={{margin:0}}>Free and slow, free and faster, or paid and fastest. Compare them below.</p>
             <div className="route-compare-strip" style={{marginTop:20}}>
@@ -417,21 +417,21 @@ function PageRoutes() {
       <div className="route-grid">
         <div className="route">
           <span className="label">1 · Free</span>
-          <h3>NHS referral</h3>
+          <h3>How does an NHS referral work?</h3>
           <div className="stats"><div className="stat"><span className="v">£0</span><span className="l">Cost</span></div><div className="stat"><span className="v">Often long</span><span className="l">Wait</span></div></div>
           <p>Your GP refers you to your local adult ADHD service and you join the queue. It's completely free, but the waiting lists are extreme right now and some trusts have closed referrals entirely. Worth doing in parallel with another route.</p>
           <ul className="pros"><li>Free at point of use</li><li>Includes follow-up & titration</li><li>Postcode lottery on quality</li></ul>
         </div>
         <div className="route featured">
           <span className="label">2 · Free, faster</span>
-          <h3>Right to <span className="it">Choose</span></h3>
+          <h3>How does Right to Choose work?</h3>
           <div className="stats"><div className="stat"><span className="v">£0</span><span className="l">Cost</span></div><div className="stat"><span className="v">Varies</span><span className="l">Wait</span></div></div>
           <p>England only. You ask your GP to refer you to a provider that holds an NHS contract. If the referral goes ahead and the provider is available, the NHS pays for the assessment. Check current availability. Many people, including some GPs, have not heard of it.</p>
           <ul className="pros"><li>Free, like the NHS</li><li>Several providers to choose from, subject to availability</li><li>GP must agree to refer</li></ul>
         </div>
         <div className="route">
           <span className="label">3 · Pay</span>
-          <h3>Private</h3>
+          <h3>Can I pay for a private ADHD assessment?</h3>
           <div className="stats"><div className="stat"><span className="v">Varies</span><span className="l">Assessment</span></div><div className="stat"><span className="v">Often quicker</span><span className="l">Wait</span></div></div>
           <p>Pay out of pocket, or via private health insurance if you're lucky enough to have it. This is the fastest route with full choice of clinician, but the costs add up, ongoing prescription costs depend on whether your GP agrees to shared care.</p>
           <ul className="pros"><li>Fastest, most flexible</li><li>Costs add up over time</li><li>Watch for shared-care refusals</li></ul>
@@ -486,7 +486,7 @@ function PageDirectory() {
   return (
     <div>
       <span className="chip">Chapter 3 · Directory</span>
-      <h2 style={{marginTop:16, marginBottom: 8}}>Clinic directory.</h2>
+      <h1 style={{marginTop:16, marginBottom: 8}}>Clinic directory.</h1>
       <p style={{fontSize:15, color:"var(--muted)", marginBottom:20}}>{list.length} of {CLINICS.length} clinics. Wait times and costs change often and vary by area. Treat every figure below as a rough estimate and check current availability with the provider. Last checked September 2026. Search each name before you contact them.</p>
       <div className="search-row">
         <input placeholder="Search by name, area or postcode" value={q} onChange={e => setQ(e.target.value)} />
@@ -527,7 +527,7 @@ function PageGPScript() {
   return (
     <div>
       <span className="chip accent">Chapter 3 · GP script</span>
-      <h2 style={{marginTop:16, marginBottom: 8}}>What to say to your GP.</h2>
+      <h1 style={{marginTop:16, marginBottom: 8}}>What to say to your GP.</h1>
       <p style={{fontSize:17, color:"var(--ink-2)", marginBottom:24,}}>If you freeze in appointments, bring this. Read it out, hand it over, or paste it into the eConsult form.</p>
       <div className="script-card">
         <p>I would like to be referred for an adult ADHD assessment. I have completed the ASRS-v1.1 self-screener and scored above the threshold. The symptoms have affected me since childhood and impact my work, relationships and daily functioning.</p>
@@ -543,7 +543,7 @@ function PageParentKids() {
   return (
     <div>
       <span className="chip" style={{background:"var(--sage)",borderColor:"var(--sage)"}}>Chapter 2 · For the child</span>
-      <h2 style={{marginTop:16, marginBottom:24}}>When your child says no.</h2>
+      <h1 style={{marginTop:16, marginBottom:24}}>When your child says no.</h1>
       <p className="lede" style={{marginBottom:32}}>Older children, and especially teenagers, often dig their heels in. "I'm not crazy." "I don't want pills." "I'll be the weird one." These are protective, and reasonable. Here are five ways to take the pressure off without forcing it.</p>
       <div className="steps-list">
         <div className="step-card"><h4>1. Drop the word "test"</h4><p>Try "a chat with someone who's really good at brains", or "a way to figure out why some things feel harder than they should". Clinical language scares kids, especially ones who already feel like something is wrong with them. Soft words open doors.</p></div>

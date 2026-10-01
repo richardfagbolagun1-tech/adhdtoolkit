@@ -7,7 +7,7 @@ function PageBeforePrivate() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--sky)", borderColor:"var(--sky)", color:"var(--ink)"}}>Chapter 3 · While you wait</span>
-          <h2 style={{marginTop:16}}>If you can't wait years and can't afford private.</h2>
+          <h1 style={{marginTop:16}}>If you can't wait years and can't afford private.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">This is the question we get asked most. You can do a lot while you wait. None of it needs a diagnosis, and it costs nothing.</p>
           <PBSlider items={[
@@ -32,19 +32,19 @@ function PageSharedCare() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--sky)", borderColor:"var(--sky)", color:"var(--ink)"}}>Chapter 3 · After diagnosis</span>
-          <h2 style={{marginTop:16}}>Shared care, the bit no one warns you about.</h2>
+          <h1 style={{marginTop:16}}>Shared care, the bit no one warns you about.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">You got diagnosed privately or via Right to Choose. Now you want your GP to take over the prescription so you pay standard NHS prescription charges instead of private prices that can run to hundreds. The handover is called shared care, and many GPs refuse. This page explains why, and what to do.</p>
             <div style={{display:"flex", flexDirection:"column", gap:14, marginTop:20}}>
-            <div className="card"><h4 style={{marginTop:10}}>The agreement</h4><p style={{marginTop:10, fontSize:15, color:"var(--ink-2)", lineHeight:1.55}}>A formal letter from your private/RTC psychiatrist to your GP, saying "we have titrated this patient, here is their dose, please prescribe NHS-side". The GP signs, NHS prescribes, you pay the standard NHS prescription charge, or you can buy a prepayment certificate if you need several items. Check current charges on nhs.uk.</p></div>
-            <div className="card"><h4 style={{marginTop:10}}>The reasons</h4><p style={{marginTop:10, fontSize:15, color:"var(--ink-2)", lineHeight:1.55}}>Some ICBs (the bodies that fund GPs) instruct surgeries to refuse shared care for Right to Choose, citing "capacity". This is contested. GPs are also nervous about prescribing controlled drugs they did not titrate. None of this is your fault.</p></div>
+            <div className="card"><h4 style={{marginTop:10}}>What is a shared care agreement?</h4><p style={{marginTop:10, fontSize:15, color:"var(--ink-2)", lineHeight:1.55}}>A formal letter from your private/RTC psychiatrist to your GP, saying "we have titrated this patient, here is their dose, please prescribe NHS-side". The GP signs, NHS prescribes, you pay the standard NHS prescription charge, or you can buy a prepayment certificate if you need several items. Check current charges on nhs.uk.</p></div>
+            <div className="card"><h4 style={{marginTop:10}}>Why do some GPs refuse shared care?</h4><p style={{marginTop:10, fontSize:15, color:"var(--ink-2)", lineHeight:1.55}}>Some ICBs (the bodies that fund GPs) instruct surgeries to refuse shared care for Right to Choose, citing "capacity". This is contested. GPs are also nervous about prescribing controlled drugs they did not titrate. None of this is your fault.</p></div>
             </div>
           </div>
         </div>
         <div className="ph-photo" style={{backgroundImage:`url('assets/page-37-shared-care.webp')`}}></div>
       </div>
       <div className="card" style={{marginTop:32}}>
-        <h4 style={{marginTop:10, fontSize:20}}>Your options, in order</h4>
+        <h4 style={{marginTop:10, fontSize:20}}>What can I do if my GP says no?</h4>
         <ol style={{marginTop:14, paddingLeft:20, fontSize:15, lineHeight:1.7, color:"var(--ink-2)"}}>
           <li>Ask for the refusal in writing, citing the specific policy.</li>
           <li>Forward to your private/RTC provider, they often have template appeals.</li>
@@ -64,7 +64,7 @@ function PageCycle() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--plum)", borderColor:"var(--plum)", color:"#fff"}}>Chapter 1.5 · Women</span>
-          <h2 style={{marginTop:16}}>ADHD and the menstrual cycle.</h2>
+          <h1 style={{marginTop:16}}>ADHD and the menstrual cycle.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
             <p className="lede">Oestrogen helps the brain use dopamine. When oestrogen falls in the second half of your cycle, ADHD symptoms often get worse. If the second half of each month feels harder, that matches what the research describes, although there are only a few studies so far.</p>
             <PBSlider items={[
@@ -88,7 +88,7 @@ function PageDriving() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" >Chapter 7 · Practical</span>
-          <h2 style={{marginTop:16}}>Driving, the DVLA, and your licence.</h2>
+          <h1 style={{marginTop:16}}>Driving, the DVLA, and your licence.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">An ADHD diagnosis does not stop you driving. There are rules to follow, especially about medication. This page explains them.</p>
           <PBAccordion items={[
@@ -112,7 +112,7 @@ function PageRelationships() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--plum)", borderColor:"var(--plum)", color:"#fff"}}>Chapter 1.5 · Relationships</span>
-          <h2 style={{marginTop:16}}>ADHD in love.</h2>
+          <h1 style={{marginTop:16}}>ADHD in love.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
             <p className="lede">Missed plans, forgotten bills, conversations that drift mid-sentence. For many couples these become the main source of arguments, often because neither person knows ADHD is behind them. This page is for both partners.</p>
             <PBSlider items={[
@@ -135,7 +135,7 @@ function PageFinancesA() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" >Chapter 7 · ADHD and money · Part 1 of 2</span>
-          <h2 style={{marginTop:16}}>The ADHD tax.</h2>
+          <h1 style={{marginTop:16}}>The ADHD tax.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">If you have ever stared at a parking fine, or a £42 late fee, or a fridge full of food that went off because you forgot it was there, and wondered what is wrong with you, this page is about that. ADHD can cost a lot of money in late fees, impulse buys, forgotten subscriptions, parking tickets and takeaways-because-there-was-no-plan-for-dinner. People call this the ADHD tax.</p>
           <p style={{fontSize:16, lineHeight:1.7, color:"var(--ink-2)", marginBottom:28}}>This page is the first of two on money. We split it because money and ADHD is sensitive, and trying to fix everything in a single bullet list is exactly the kind of thing your brain has been punished for failing at. Take it slowly. You do not need to apply all of this today. Pick the one thing on this page that feels least frightening, and start there. Part two, on the next page, is where we cover debt, benefits, and the long-game stuff.</p>
@@ -165,7 +165,7 @@ function PageFinancesB() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" >Chapter 7 · ADHD and money · Part 2 of 2</span>
-          <h2 style={{marginTop:16}}>If you are already in trouble, many people are in the same position, and there is help.</h2>
+          <h1 style={{marginTop:16}}>If you are already in trouble, many people are in the same position, and there is help.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">A surprising number of the people we hear from arrive at money advice having been carrying debt, missed payments, or unclaimed benefits for years. ADHD makes money paperwork much harder than it should be. This page covers debt, missed payments and benefits, and the UK services that help.</p>
           <p style={{fontSize:16, lineHeight:1.7, color:"var(--ink-2)", marginBottom:28}}>If only one of the three points below applies to you right now, that is enough. You do not need to read all three. Pick the one that lines up with where you are, do that one thing in the next week, and let the others wait until they are needed.</p>
@@ -196,7 +196,7 @@ function PageAddictionA() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" >Chapter 9 · ADHD and addiction · Part 1 of 2</span>
-          <h2 style={{marginTop:16}}>This page covers ADHD and addiction. It is more common than you think.</h2>
+          <h1 style={{marginTop:16}}>This page covers ADHD and addiction. It is more common than you think.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">If you opened this page because something in you said <em>this might be me</em>, read on. Adults with ADHD are at higher risk of developing a problem with alcohol, weed, harder drugs, gambling, food, screens or shopping. This page explains why. The next page covers what helps.</p>
           <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"32px 0 12px"}}>Why this happens</h3>
@@ -222,7 +222,7 @@ function PageAddictionB() {
       <div className="ph">
         <div>
           <span className="chip" >Chapter 9 · ADHD and addiction · Part 2 of 2</span>
-          <h2 style={{marginTop:16}}>What helps. Free, in the UK, today.</h2>
+          <h1 style={{marginTop:16}}>What helps. Free, in the UK, today.</h1>
           <p className="lede">This page follows on from the last one. It covers practical steps that help. None of them need a diagnosis, and you don't have to call yourself an addict to use them.</p>
         </div>
         <div className="ph-photo" style={{backgroundImage:`url('${"assets/addiction-coffee-phone.webp"}')`}}></div>
@@ -247,7 +247,7 @@ function PageFirstWeeksMeds() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" >Chapter 5 · Medication</span>
-          <h2 style={{marginTop:16}}>The first two weeks on meds.</h2>
+          <h1 style={{marginTop:16}}>The first two weeks on meds.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">Many people do not feel "fixed" on day one. Some feel nothing for a fortnight. A few feel jittery. Some describe a sudden calm. This page covers what is normal, what isn't, and when to call your prescriber.</p>
           <PBAccordion items={[
@@ -271,7 +271,7 @@ function PageBodyOnMeds() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" >Chapter 5 · Medication</span>
-          <h2 style={{marginTop:16}}>What stimulants do to your body.</h2>
+          <h1 style={{marginTop:16}}>What stimulants do to your body.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">Stimulants are largely safe in healthy adults at prescribed doses. They do real, observable things to your body, though, and it helps to know what to expect.</p>
             <PBAccordion items={[
@@ -296,7 +296,7 @@ function PageBurnout() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" >Chapter 6 · Work</span>
-          <h2 style={{marginTop:16}}>If you already feel broken.</h2>
+          <h1 style={{marginTop:16}}>If you already feel broken.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">ADHD burnout often follows years of overworking and hyperfocus to keep up. It is common, and you can recover from it.</p>
           <PBAccordion items={[
@@ -344,7 +344,7 @@ function PageGlossary() {
   return (
     <div>
       <span className="chip">Reference · Glossary</span>
-      <h2 style={{marginTop:16, marginBottom:8}}>The acronyms, decoded.</h2>
+      <h1 style={{marginTop:16, marginBottom:8}}>The acronyms, decoded.</h1>
       <p style={{fontSize:16, color:"var(--muted)", marginBottom:20,}}>The UK ADHD world has too many initials. Here are all of them, plain English.</p>
       <input value={q} onChange={e=>setQ(e.target.value)} placeholder="Search the glossary..." style={{width:"100%", padding:"14px 18px", fontSize:16, borderRadius:12, border:"1px solid var(--line)", background:"var(--paper)", color:"var(--ink)", fontFamily:"inherit", marginBottom:24}} />
       <div style={{display:"grid", gridTemplateColumns:"repeat(2,1fr)", gap:12}}>
@@ -399,7 +399,7 @@ function PageSharedCareScripts() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--sky)", borderColor:"var(--sky)", color:"var(--ink)"}}>Chapter 3 · After diagnosis</span>
-          <h2 style={{marginTop:16}}>Three scripts for when shared care is refused.</h2>
+          <h1 style={{marginTop:16}}>Three scripts for when shared care is refused.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">If your GP has just told you they won't take over your ADHD prescription, this happens a lot. These three scripts come from people on r/ADHDUK who have been through it. They keep the conversation focused on the facts.</p>
           <p style={{marginBottom:28, color:"var(--ink-2)", fontSize:16, lineHeight:1.6}}>Print these off or save them to your phone before the appointment. Read them out if you need to, you will not be the first patient to do exactly that. Try to stay calm, ask in this order, and treat a refusal as information rather than a final answer.</p>

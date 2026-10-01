@@ -368,22 +368,26 @@ function App() {
         <div key={idx} style={{"--ch": chapter.color}} className={`pb-page ${direction === "back" ? "back" : ""} ${idx === 0 ? "pb-page-cover" : ""} ${idx > 0 && PAGES[idx - 1] && PAGES[idx - 1].ch !== page.ch ? "pb-first" : ""} ${READING_PAGES.includes(SLUGS[idx]) ? "pb-reading" : ""}`}>
           {page.render(ctx)}
           {PAGE_NOTES[SLUGS[idx]] && <p className="pb-page-note">{PAGE_NOTES[SLUGS[idx]]}</p>}
+          {(SLUGS[idx] === "index.html" || SLUGS[idx] === "fostering-adoption-and-kinship-care.html") && window.PBSignup && <div className="pb-signup-wrap"><window.PBSignup /></div>}
+          {idx > 0 && <p className="pb-byline">Written by <a href="who-made-this.html">Rich</a>, who has ADHD. This guide is information, not medical advice. <a href="how-this-guide-is-written.html">How this guide is written</a> · <a href="crisis-lines.html">Need help now?</a></p>}
         </div>
       </main>
 
       <footer className="pb-bottom">
         <div className="pb-bottom-row">
           {idx > 0 ? (
-            <button className="pb-nav-btn pb-prev" aria-label="Previous page" onClick={() => go(idx - 1)}>
+            <a href={SLUGS[idx - 1]} className="pb-nav-btn pb-prev" rel="prev" aria-label="Previous page" onClick={(e) => { e.preventDefault(); go(idx - 1); }}>
               <span className="mob-arrow" aria-hidden="true">←</span><span className="full-label">Previous</span>
-            </button>
+            </a>
           ) : <div></div>}
           <div className="pb-counter">
             <strong>{idx + 1}</strong> <span>/ {total}</span>
           </div>
-          <button className="pb-nav-btn next pb-next" aria-label={idx === 0 ? "Start" : "Next page"} onClick={() => go(idx + 1)} disabled={idx === total - 1}>
-            <span className="full-label">{idx === 0 ? "Start" : idx === total - 2 ? "Finish" : "Next"}</span><span className="mob-arrow" aria-hidden="true">→</span>
-          </button>
+          {idx < total - 1 ? (
+            <a href={SLUGS[idx + 1]} className="pb-nav-btn next pb-next" rel="next" aria-label={idx === 0 ? "Start" : "Next page"} onClick={(e) => { e.preventDefault(); go(idx + 1); }}>
+              <span className="full-label">{idx === 0 ? "Start" : idx === total - 2 ? "Finish" : "Next"}</span><span className="mob-arrow" aria-hidden="true">→</span>
+            </a>
+          ) : <span className="pb-next"></span>}
         </div>
         <p className="pb-credit">Made with love by <a href="https://richexperiments.com" target="_blank" rel="noopener"><strong>Rich Experiments</strong></a></p>
       </footer>
@@ -403,10 +407,10 @@ function App() {
             <div className="pb-drawer-chapter">
               <h4><span className="swatch" style={{background: "#FF5A36"}}></span>Saved</h4>
               {savedPages.map(p => (
-                <button key={p.idx} className={`pb-drawer-page ${p.idx === idx ? "current" : ""}`} onClick={() => { go(p.idx); setDrawerOpen(false); }} aria-current={p.idx === idx ? "page" : undefined}>
+                <a href={SLUGS[p.idx]} key={p.idx} className={`pb-drawer-page ${p.idx === idx ? "current" : ""}`} onClick={(e) => { e.preventDefault(); go(p.idx); setDrawerOpen(false); }} aria-current={p.idx === idx ? "page" : undefined}>
                   <span className="num">{p.idx + 1}</span>
                   <span>{p.title}</span>
-                </button>
+                </a>
               ))}
             </div>
           )}
@@ -422,14 +426,14 @@ function App() {
                   {!drawerQuery && <span className="pb-chapter-progress">{doneCount}/{allPages.length} read</span>}
                 </h4>
                 {pages.map(p => (
-                  <button key={p.idx} className={`pb-drawer-page ${p.idx === idx ? "current" : ""} ${visited.has(p.idx) ? "visited" : ""}`} onClick={() => { go(p.idx); setDrawerOpen(false); }} aria-current={p.idx === idx ? "page" : undefined}>
+                  <a href={SLUGS[p.idx]} key={p.idx} className={`pb-drawer-page ${p.idx === idx ? "current" : ""} ${visited.has(p.idx) ? "visited" : ""}`} onClick={(e) => { e.preventDefault(); go(p.idx); setDrawerOpen(false); }} aria-current={p.idx === idx ? "page" : undefined}>
                     <span className="num">{p.idx + 1}</span>
                     <span>{p.title}</span>
                     {visited.has(p.idx) && <span className="pb-sr-only">, read</span>}
                     <span className="pb-drawer-star-hit" onClick={(e) => { e.stopPropagation(); toggleSaved(p.idx); }} role="button" aria-label={saved.has(p.idx) ? `Remove bookmark for ${p.title}` : `Save ${p.title}`}>
                       <span className={`pb-drawer-star ${saved.has(p.idx) ? "active" : ""}`}>★</span>
                     </span>
-                  </button>
+                  </a>
                 ))}
               </div>
             );

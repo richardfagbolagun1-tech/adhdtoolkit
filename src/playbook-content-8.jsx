@@ -74,7 +74,7 @@ ${postcode || "[Your postcode]"}`;
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"#FFE94A", borderColor:"#FFE94A", color:"#1A1814"}}>Chapter 9 · Take action</span>
-          <h2 style={{marginTop:16}}>Write to your MP, in 90 seconds.</h2>
+          <h1 style={{marginTop:16}}>Write to your MP, in 90 seconds.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">ADHD UK is asking people to write to their MPs about NHS ADHD care. This generator writes the letter for you to post or email. Everything stays in your browser. We never see what you type.</p>
           <div className="card" style={{marginTop:20, padding:"22px 26px", background:"var(--bg-2)"}}>
@@ -141,7 +141,7 @@ function PageTimeBlindness() {
       <div className="ph ph-stack">
         <div>
           <span className="chip">Chapter 4 · Daily tools</span>
-          <h2 style={{marginTop:16}}>Time blindness, and how to make time visible.</h2>
+          <h1 style={{marginTop:16}}>Time blindness, and how to make time visible.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">You think you have an hour to spare, then realise you do not. It is a difference in how your brain perceives the passing of minutes and hours, and there are practical tools that help.</p>
           <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:24, margin:"32px 0 16px"}}>What it feels like</h3>

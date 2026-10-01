@@ -7,7 +7,7 @@ function PageNotOneWayIntro() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--plum)", borderColor:"var(--plum)", color:"#fff"}}>Chapter 1.5 · Read this if you didn't see yourself</span>
-          <h2 style={{marginTop:16}}>ADHD doesn't look one way.</h2>
+          <h1 style={{marginTop:16}}>ADHD doesn't look one way.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">The screener is useful, but it does not capture every way ADHD can present. A low result does not diagnose ADHD. If you have long-standing difficulties that affect daily life, you can still discuss them with a qualified clinician. Over the next four pages we cover the four most common reasons people get missed.</p>
           <div className="intro-block">
@@ -28,7 +28,7 @@ function PageLateWomen() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--plum)", borderColor:"var(--plum)", color:"#fff"}}>Chapter 1.5 · Late-diagnosed women</span>
-      <h2 style={{marginTop:16}}>The masked version.</h2>
+      <h1 style={{marginTop:16}}>The masked version.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
             <p className="lede">Women are often diagnosed years later than men, because the signs are quieter: inner restlessness, perfectionism, people-pleasing, exhaustion by 4pm. Many learn to mask early, and it holds until the load gets too big, often around a new job, a baby or perimenopause.</p>
             <PBSlider items={[
@@ -51,7 +51,7 @@ function PageRSD() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--plum)", borderColor:"var(--plum)", color:"#fff"}}>Chapter 1.5 · Rejection Sensitive Dysphoria</span>
-      <h2 style={{marginTop:16}}>When rejection feels bigger than the moment.</h2>
+      <h1 style={{marginTop:16}}>When rejection feels bigger than the moment.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
       <p className="lede">Many adults with ADHD describe rejection or criticism as physically painful. It might be a short text reply, a friend cancelling plans or a look in a meeting. The feeling can last for hours, and it is hard to talk yourself out of it. RSD is a commonly used community term, not a formal diagnosis in diagnostic manuals. Having a name for it can make it easier to explain to people close to you.</p>
             <PBSlider items={[
@@ -81,7 +81,7 @@ function PageCoOccur() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--plum)", borderColor:"var(--plum)", color:"#fff"}}>Chapter 1.5 · Co-occurring conditions</span>
-      <h2 style={{marginTop:16}}>The double diagnosis.</h2>
+      <h1 style={{marginTop:16}}>The double diagnosis.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
             <p className="lede">If you have been treated for anxiety or depression and it never quite helped, ADHD may be part of the picture. Anxiety and depression are among the most common conditions alongside ADHD, and many adults with ADHD are also autistic. ADHD is often missed when anxiety or depression are treated first.</p>
             <PBSlider items={[
@@ -107,7 +107,7 @@ function PageShame() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--plum)", borderColor:"var(--plum)", color:"#fff"}}>Chapter 1.5 · The shame piece</span>
-      <h2 style={{marginTop:16}}>Shame and ADHD.</h2>
+      <h1 style={{marginTop:16}}>Shame and ADHD.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
             <p className="lede">Many people spend years thinking they are lazy, careless or not trying hard enough. If that feels familiar, you are not alone, and it does not mean there is something wrong with you as a person. It can feel like running a marathon in flip-flops while everyone else has trainers.</p>
             <PBSlider items={[
@@ -176,7 +176,7 @@ function PageBooksApps() {
       <div className="ph ph-stack">
         <div>
           <span className="chip">Chapter 4 · The toolkit</span>
-          <h2 style={{marginTop:16}}>Books and apps.</h2>
+          <h1 style={{marginTop:16}}>Books and apps.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">None of these are sponsored and we don't earn anything if you buy them. They are the titles and apps people with ADHD recommend most often to someone just starting out.</p>
             <h3 style={{fontSize:22, margin:"24px 0 0"}}>Books</h3>
@@ -221,7 +221,7 @@ function PageFAQ() {
       <div className="ph ph-stack">
         <div>
           <span className="chip">Chapter 9 · FAQ</span>
-          <h2 style={{marginTop:16}}>The questions we all ask.</h2>
+          <h1 style={{marginTop:16}}>The questions we all ask.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
             <div style={{display:"flex", flexDirection:"column", gap:8}}>
               {FAQS.map((f,i) => (
@@ -230,7 +230,7 @@ function PageFAQ() {
                     <span style={{fontSize:17, fontWeight:500}}>{f.q}</span>
                     <span style={{fontSize:22, color:"var(--muted)", lineHeight:1}}>{open === i ? "−" : "+"}</span>
                   </div>
-                  {open === i && <p style={{marginTop:14, fontSize:15, color:"var(--ink-2)", lineHeight:1.6}}>{f.a}</p>}
+                  <p className={open === i ? "" : "pbn-hide"} style={{marginTop:14, fontSize:15, color:"var(--ink-2)", lineHeight:1.6}}>{f.a}</p>
                 </button>
               ))}
             </div>
@@ -271,7 +271,7 @@ function PageIceberg() {
       <div className="ph ph-stack">
         <div>
           <span className="chip" style={{background:"var(--sky)", borderColor:"var(--sky)", color:"var(--ink)"}}>Chapter 1 · Recognition</span>
-          <h2 style={{marginTop:16}}>The ADHD iceberg.</h2>
+          <h1 style={{marginTop:16}}>The ADHD iceberg.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
           <p className="lede">If you have only ever heard ADHD described as "trouble concentrating" and "can't sit still", you have only ever heard about the tip. What people see at school, at work, in your relationships, is a tiny fraction of what ADHD is doing inside you. Below the waterline are the parts nobody sees: the effort, the shame and the exhaustion.</p>
             <div style={{borderRadius:18, margin:"20px 0 0", position:"relative", overflow:"hidden"}}>

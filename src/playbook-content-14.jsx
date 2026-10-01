@@ -8,7 +8,7 @@ function PageHowToUse() {
       <div className="ph ph-howto">
         <div>
           <span className="chip" style={{background:"var(--peach)", borderColor:"var(--peach)", color:"var(--ink)"}}>Read first · 90 seconds</span>
-          <h2 style={{marginTop:16}}>How to use this playbook.</h2>
+          <h1 style={{marginTop:16}}>How to use this playbook.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
             <p className="lede">There are 79 pages here and you don't need to read them all. Start with the one that matches where you are, and come back when something specific comes up.</p>
           <h3 style={{fontFamily:"var(--display)", fontWeight:500, fontSize:22, margin:"24px 0 4px"}}>The four ways to use it</h3>
@@ -42,12 +42,12 @@ function PageSkim() {
       <div className="ph ph-howto ph-skim">
         <div>
           <span className="chip" style={{background:"#FFE94A", borderColor:"#FFE94A", color:"#1A1814"}}>The skim · 2 minutes</span>
-          <h2 style={{marginTop:16}}>If you only read one page.</h2>
+          <h1 style={{marginTop:16}}>If you only read one page.</h1>
           <div style={{gridColumn:1, minWidth:0, alignSelf:"start"}}>
             <p className="lede">The eight things from this playbook that matter most. If you read nothing else here, read these. Each one links to the page with more detail.</p>
           <PBSlider items={[
             {h:"You're not lazy. ADHD can affect attention, motivation, time and follow-through in ways other people may not see.", p:"It affects attention regulation, executive function, time perception and emotion. It is one of the most heritable conditions in psychiatry. If you have been told you are lazy, weak, or undisciplined, that was a brain difference nobody had named."},
-            {h:"NHS Right to Choose. In England, it may offer a faster NHS-funded assessment route.", p:"Waiting times vary widely across the UK, and can be very long in some areas. If you live in England and your GP agrees you need an assessment, you have a legal right to choose which NHS-contracted provider does it. This is called Right to Choose. Since 2026 many areas cap how many assessments each provider is funded for, so waits still vary. The Fast Track page in this playbook generates the GP letter for you."},
+            {h:"NHS Right to Choose. In England, it may offer a faster NHS-funded assessment route.", p:"Waiting times vary widely across the UK, and can be very long in some areas. If you live in England and your GP agrees you need an assessment, you have a legal right to choose which NHS-contracted provider does it. This is called Right to Choose. It applies in England only, needs a GP referral and is NHS-funded, so it's free to you. Since 2026 many areas cap how many assessments each provider is funded for, so waits still vary. The Fast Track page in this playbook generates the GP letter for you."},
             {h:"It doesn't look one way. A low screener result is not the final word.", p:"Older stereotypes centred on hyperactive boys. Women, people who mask, people with inattentive ADHD, autistic adults and marginalised groups are more often overlooked. Chapter 1 covers these. If you scored low but still recognise yourself, you can discuss it with a clinician."},
             {h:"Medication helps many people, and the first few weeks are not the final answer.", p:"Many adults find stimulant medication helpful, although the right medicine, dose and side effects vary. Finding the right medicine and dose can take time, and should be guided by your prescriber. If you are diagnosed privately or through some NHS-funded providers, you can ask about shared care, although local arrangements vary. The Meds chapter walks through all of it."},
             {h:"Work has rights. ADHD may be protected under the Equality Act 2010.", p:"If it has a substantial and long-term effect on your day-to-day life, you may be able to ask for reasonable adjustments at work. Access to Work may help fund practical support, such as equipment, coaching, support workers or travel. Support is assessed individually. Check current information on GOV.UK. Many people with ADHD don't know about either. The Work chapter explains both."},
